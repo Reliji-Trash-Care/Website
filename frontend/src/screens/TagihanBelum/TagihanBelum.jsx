@@ -3,6 +3,7 @@ import { Button } from "../../components/Button";
 import { MenuItem } from "../../components/MenuItem";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
+import { TagihanPilih } from "../TagihanPilih/TagihanPilih";
 
 export const TagihanBelum = () => {
   return (
@@ -71,7 +72,7 @@ export const TagihanBelum = () => {
               </div>
             </div>
           </div>
-          <Button className="!absolute !left-[375px] !top-[318px]" property1="default" text="Bayar Sekarang" />
+          <Button className="!cursor-pointer !absolute !left-[375px] !top-[318px]" property1="default" text="Bayar Sekarang" navigateTo="/tagihanpilih"/>
           <img
             className="absolute w-[462px] h-px top-[293px] left-[48px] object-cover"
             alt="Line"
@@ -91,22 +92,25 @@ export const TagihanBelum = () => {
         <div className="absolute w-[996px] h-[62px] top-[86px] left-[324px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
           <img className="absolute w-[337px] h-[5px] top-[57px] left-0" alt="Line" src="../../../static/img/line-21.svg" />
           <MenuItem
-            className="!absolute !left-[107px] !top-[10px]"
+            className="!cursor-pointer !absolute !left-[107px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Belum Bayar"
+            navigateTo="/tagihanbelum"
           />
           <MenuItem
-            className="!px-0 !py-[10px] !absolute !left-[428px] !top-[10px]"
+            className="!cursor-pointer !px-0 !py-[10px] !absolute !left-[428px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Status Pembayaran"
+            navigateTo="/tagihanstatus"
           />
           <MenuItem
-            className="!absolute !left-[785px] !top-[10px]"
+            className="!cursor-pointer !absolute !left-[785px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Selesai"
+            navigateTo="/tagihanselesai"
           />
         </div>
         <SideBarWrapper

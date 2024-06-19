@@ -122,7 +122,8 @@ export const SignUp = () => {
                   </div>
                 </div>
                 <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">
-                  <CheckboxFalse className="!relative !w-[24px] !h-[24px]" color="#1F1F1F" />
+                  {/* <CheckboxFalse className="!relative !w-[24px] !h-[24px]" color="#1F1F1F" /> */}
+                  <input type="checkbox" className="!relative !w-[24px] !h-[24px]" color="#313131" />
                   <p className="relative w-fit font-body-2-bold font-[number:var(--body-2-bold-font-weight)] text-tersier-2 text-[length:var(--body-2-bold-font-size)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] whitespace-nowrap [font-style:var(--body-2-bold-font-style)]">
                     Saya menyetujui semua persyaratan dan kebijakan privasi
                   </p>

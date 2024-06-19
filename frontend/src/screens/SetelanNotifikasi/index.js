@@ -1,1 +1,0 @@
-export { SetelanNotifikasi } from "./SetelanNotifikasi";

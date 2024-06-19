@@ -2,6 +2,7 @@ import React from "react";
 import { MenuItem } from "../../components/MenuItem";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
+import SideBarAdmin from "../../components/SideBarAdmin/SideBarAdmin";
 
 export const TagihanAdmin = () => {
   return (
@@ -265,7 +266,7 @@ export const TagihanAdmin = () => {
           profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-3.png"
           profilText="Admin"
         />
-        <SideBarWrapper
+        <SideBarAdmin
           chatText="Chat"
           className="!fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"

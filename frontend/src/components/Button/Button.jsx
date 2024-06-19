@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 import React from "react";
 import { useReducer } from "react";
+import { useNavigate } from 'react-router-dom';
 
-export const Button = ({ property1, className, divClassName, text = "Button" }) => {
+export const Button = ({ property1, className, divClassName, text = "Button" ,navigateTo}) => {
   const [state, dispatch] = useReducer(reducer, {
     property1: property1 || "default",
   });
+
+  const navigate = useNavigate();
 
   return (
     <button
@@ -17,6 +20,9 @@ export const Button = ({ property1, className, divClassName, text = "Button" }) 
       }}
       onMouseEnter={() => {
         dispatch("mouse_enter");
+      }}
+      onClick={() => {
+        navigate(navigateTo);
       }}
     >
       <div

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
+import SideBarAdmin from "../../components/SideBarAdmin/SideBarAdmin";
 
 export const ChatPengelolaAdmin = () => {
   return (
@@ -122,7 +123,7 @@ export const ChatPengelolaAdmin = () => {
           </div>
         </div>
         <div className="absolute w-[24px] h-[24px] top-[19px] left-[1207px] bg-[url(/static../../../static/img/ellipse-7.png)] bg-cover bg-[50%_50%]" />
-        <SideBarWrapper
+        <SideBarAdmin
           chatDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
           chatPropertyDefaultClassName="!flex-[0_0_auto] !bg-secondary-1"
           chatText="Chat"
@@ -134,6 +135,17 @@ export const ChatPengelolaAdmin = () => {
           tagihanText="Pemasukan Iuran"
           to="/chat-pengelola-u40adminu41"
         />
+        {/* <SideBarAdmin
+          beritaPropertyDefaultClassName="!flex-[0_0_auto] !bg-secondary-1"
+          chatText="Chat"
+          className="!fixed !left-0 !top-0"
+          deteksiDeteksi="../../../static/img/deteksi-3.svg"
+          logoPlaceholderGroup="../../../static/img/group-7-2.png"
+          sideBarDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          sideBarPropertyDefaultClassName="!flex-[0_0_auto] !bg-[unset]"
+          tagihanText="Pemasukan Iuran"
+          to="/input-berita"
+        /> */}
         <NavbarUserFitur
           className="!fixed !left-[324px] !top-0"
           profilArrowDown="../../../static/img/arrow-down-2-3.svg"

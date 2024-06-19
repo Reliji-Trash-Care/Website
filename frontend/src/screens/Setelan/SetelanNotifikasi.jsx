@@ -1,9 +1,6 @@
 import React from "react";
-import { Jadwal } from "../../components/Jadwal";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
-import { Group2 } from "../../icons/Group2";
-import { Group3 } from "../../icons/Group3";
 
 export const SetelanNotifikasi = () => {
   return (
@@ -22,21 +19,28 @@ export const SetelanNotifikasi = () => {
             Notifikasi</a>
           </div>
           <div className="inline-flex flex-col items-start gap-[24px] absolute top-[35px] left-[429px]">
-            <div className="inline-flex items-center relative flex-[0_0_auto]">
-              <div className="flex w-[190px] items-center gap-[12px] px-0 py-[6px] relative bg-primary-1 rounded-[10px]">
-                <div className="relative w-fit mt-[-1.00px] font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] text-center tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
-                  Pembayaran
-                </div>
+          <div class="inline-flex items-center relative flex-[0_0_auto]">
+            <div class="flex w-[190px] items-center justify-between gap-[12px] px-0 py-[6px] bg-primary-1 rounded-[10px]">
+              <div class="relative w-fit mt-[-1.00px] font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] text-center tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
+                Pembayaran
               </div>
-              <Group2 className="!relative !w-[57px] !h-[43px] !mt-[-1.50px] !mb-[-7.50px]" />
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer"/>
+                    <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                </label>
+              </div>
             </div>
-            <div className="inline-flex items-start relative flex-[0_0_auto]">
-              <div className="flex w-[190px] items-center gap-[12px] px-0 py-[6px] relative bg-primary-1 rounded-[10px]">
-                <div className="relative w-fit mt-[-1.00px] font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] text-center tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
+            
+            <div class="inline-flex items-center relative flex-[0_0_auto]">
+              <div class="flex w-[190px] items-center justify-between gap-[12px] px-0 py-[6px] bg-primary-1 rounded-[10px]">
+                <div class="relative w-fit mt-[-1.00px] font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] text-center tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
                   Chat
                 </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" class="sr-only peer"/>
+                  <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                </label>
               </div>
-              <Group3 className="!relative !w-[57px] !h-[43px] !mt-[-3.00px] !mb-[-6.00px]" />
             </div>
           </div>
         </div>

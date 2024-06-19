@@ -1,6 +1,6 @@
 import React from "react";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
-import { SideBarWrapper } from "../../components/SideBarWrapper";
+import SideBarAdmin from "../../components/SideBarAdmin/SideBarAdmin";
 
 export const DetailInputJadwal = () => {
   return (
@@ -17,7 +17,7 @@ export const DetailInputJadwal = () => {
         </div>
         <div className="absolute w-[24px] h-[24px] top-[19px] left-[1207px] bg-[url(../../../static/img/ellipse-7.png)] bg-cover bg-[50%_50%]" />
         <NavbarUserFitur className="!fixed !left-[324px] !top-0" profilHasOpenartImage={false} profilText="Admin" />
-        <SideBarWrapper
+        <SideBarAdmin
           chatText="Chat"
           className="!h-[1307px] !fixed !left-px !top-0"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"

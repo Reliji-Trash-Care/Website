@@ -5,8 +5,9 @@ import { MenuItem } from "../../components/MenuItem";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
 import { TextField } from "../../components/TextField";
+import SideBarAdmin from "../../components/SideBarAdmin/SideBarAdmin";
 
-export const SetelanProfil = () => {
+export const SetelanProfilAdmin = () => {
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-primary-1 overflow-hidden w-[1440px] h-[772px] relative">
@@ -15,11 +16,11 @@ export const SetelanProfil = () => {
           <div className="w-[690px] left-[388px] absolute h-[600px] top-0 bg-primary-1 rounded-[15px] shadow-drop-shadow-2" />
           <div className="w-[282px] left-[82px] absolute h-[600px] top-0 bg-primary-1 rounded-[15px] shadow-drop-shadow-2" />
           <div className="inline-flex flex-col items-start gap-[36px] absolute top-[38px] left-[109px]">
-          <a href="/setelanprofil" className="font-body-1-regular w-fit tracking-[var(--body-1-regular-letter-spacing)] [font-style:var(--body-1-regular-font-style)] text-[length:var(--body-1-regular-font-size)] text-black font-[number:var(--body-1-regular-font-weight)] text-center whitespace-nowrap leading-[var(--body-1-regular-line-height)] relative">
+          <a href="/setelanprofiladmin" className="font-body-1-regular w-fit tracking-[var(--body-1-regular-letter-spacing)] [font-style:var(--body-1-regular-font-style)] text-[length:var(--body-1-regular-font-size)] text-black font-[number:var(--body-1-regular-font-weight)] text-center whitespace-nowrap leading-[var(--body-1-regular-line-height)] relative">
             Edit Profile</a>
-            <a href="/setelanganti" className="font-body-1-regular w-fit tracking-[var(--body-1-regular-letter-spacing)] [font-style:var(--body-1-regular-font-style)] text-[length:var(--body-1-regular-font-size)] text-black font-[number:var(--body-1-regular-font-weight)] text-center whitespace-nowrap leading-[var(--body-1-regular-line-height)] relative">
+            <a href="/setelangantiadmin" className="font-body-1-regular w-fit tracking-[var(--body-1-regular-letter-spacing)] [font-style:var(--body-1-regular-font-style)] text-[length:var(--body-1-regular-font-size)] text-black font-[number:var(--body-1-regular-font-weight)] text-center whitespace-nowrap leading-[var(--body-1-regular-line-height)] relative">
             Ganti</a>
-            <a href="/setelannotifikasi" className="font-body-1-regular w-fit tracking-[var(--body-1-regular-letter-spacing)] [font-style:var(--body-1-regular-font-style)] text-[length:var(--body-1-regular-font-size)] text-black font-[number:var(--body-1-regular-font-weight)] text-center whitespace-nowrap leading-[var(--body-1-regular-line-height)] relative">
+            <a href="/setelannotifikasiadmin" className="font-body-1-regular w-fit tracking-[var(--body-1-regular-letter-spacing)] [font-style:var(--body-1-regular-font-style)] text-[length:var(--body-1-regular-font-size)] text-black font-[number:var(--body-1-regular-font-weight)] text-center whitespace-nowrap leading-[var(--body-1-regular-line-height)] relative">
             Notifikasi</a>
           </div>
           <div className="inline-flex items-center gap-[12px] absolute top-[30px] left-[427px]">
@@ -106,7 +107,7 @@ export const SetelanProfil = () => {
             <Button className="!flex-[0_0_auto]" property1="default" text="Simpan" />
           </div>
         </div>
-        <SideBarWrapper
+        <SideBarAdmin
           className="!h-[772px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"

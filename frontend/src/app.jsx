@@ -12,11 +12,11 @@ import { SignUp } from './screens/SignUp/SignUp'
 import { Home } from "./screens/Home/Home";
 import { BeritaUser } from "./screens/BeritaUser/BeritaUser";
 import { BeritaDetailHotUser } from "./screens/BeritaDetailHotUser/BeritaDetailHotUser";
-import { SetelanProfil } from './screens/SetelanProfil/SetelanProfil'
+import { SetelanProfil } from './screens/Setelan/SetelanProfil'
 import { DeteksiUser } from './screens/DeteksiUser/DeteksiUser'
 import { HomeAdmin } from "./screens/HomeAdmin/HomeAdmin";
-import { SetelanGanti } from "./screens/SetelanGanti/SetelanGanti";
-import { SetelanNotifikasi } from "./screens/SetelanNotifikasi/SetelanNotifikasi";
+import { SetelanGanti } from "./screens/Setelan/SetelanGanti";
+import { SetelanNotifikasi } from "./screens/Setelan/SetelanNotifikasi";
 import { JadwalSampahAdmin } from "./screens/JadwalSampahAdmin/JadwalSampahAdmin";
 import { DetailInputJadwal } from "./screens/DetailInputJadwal/DetailInputJadwal"; 
 import { InputBerita } from "./screens/InputBerita/InputBerita";
@@ -33,6 +33,9 @@ import { ForgotPassword } from "./screens/ForgotPassword/ForgotPassword";
 import { TagihanStatus } from "./screens/TagihanStatus/TagihanStatus";
 import { TagihanSelesai } from './screens/TagihanSelesai/TagihanSelesai';
 import { BeritaLatestUser } from './screens/BeritaLatestUser/BeritaLatestUser';
+import { SetelanProfilAdmin } from './screens/Setelan/SetelanProfilAdmin';
+import { SetelanNotifikasiAdmin } from './screens/Setelan/SetelanNotifikasiAdmin';
+import { SetelanGantiAdmin } from './screens/Setelan/SetelanGantiAdmin';
 
 const App = () => {
   return (
@@ -54,6 +57,7 @@ const App = () => {
     <Route path='/beritadetailuser' element={<BeritaDetailHotUser/>} />
     <Route path='/beritalatestuser' element={<BeritaLatestUser/>} />
     <Route path='/setelanprofil' element={<SetelanProfil/>} />
+    <Route path='/setelanprofiladmin' element={<SetelanProfilAdmin/>} />
     <Route path='/jadwalsampahuser' element={<JadwalSampahUser/>} />
     <Route path='/tagihanbelum' element={<TagihanBelum/>} />
     <Route path='/tagihanpilih' element={<TagihanPilih/>} />
@@ -64,7 +68,9 @@ const App = () => {
     <Route path='/deteksiupload' element={<DeteksiUpload/>} />
     <Route path='/homeadmin' element={<HomeAdmin/>} />
     <Route path='/setelanganti' element={<SetelanGanti/>} />
+    <Route path='/setelangantiadmin' element={<SetelanGantiAdmin/>} />
     <Route path='/setelannotifikasi' element={<SetelanNotifikasi/>} />
+    <Route path='/setelannotifikasiadmin' element={<SetelanNotifikasiAdmin/>} />
     <Route path='/jadwalsampahadmin' element={<JadwalSampahAdmin/>} />
     <Route path='/detailinputjadwalsampah' element={<DetailInputJadwal/>} />
     <Route path='/inputberita' element={<InputBerita/>} />

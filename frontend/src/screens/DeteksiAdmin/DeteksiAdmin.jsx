@@ -3,7 +3,7 @@ import { Button } from "../../components/Button";
 import { Default } from "../../components/Default";
 import { Divider } from "../../components/Divider";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
-import { SideBarWrapper } from "../../components/SideBarWrapper";
+import SideBarAdmin from "../../components/SideBarAdmin/SideBarAdmin";
 
 export const DeteksiAdmin = () => {
   return (
@@ -110,7 +110,7 @@ export const DeteksiAdmin = () => {
             Bayar
           </div>
         </div>
-        <SideBarWrapper
+        <SideBarAdmin
           chatDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-normal ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
           className="!h-[744px] !fixed !left-0 !top-0"
           deteksiDetekaiClassName="!tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"

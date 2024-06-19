@@ -43,30 +43,36 @@ export const Login = () => {
                 textFieldClassName="!rounded-[10px] !bg-primary-1"
                 trailingIcon={false}
               />
-              <TextField
-                className="!w-[486px]"
-                divClassName="!text-t !tracking-[var(--body-2-regular-letter-spacing)] !text-[length:var(--body-2-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-2-regular-font-style)] !font-[number:var(--body-2-regular-font-weight)] !font-body-2-regular !leading-[var(--body-2-regular-line-height)]"
-                icon={<EyeOff className="!relative !w-[24px] !h-[24px]" color="#313131" />}
-                inputTextClassNameOverride="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                label="Password"
-                labelTextWrapperClassName="!bg-primary-1"
-                leadingIcon={false}
-                state="enabled"
-                style="outlined"
-                supportingText={false}
-                textConfigurations="input-text"
-                textFieldClassName="!rounded-[10px] !bg-primary-1"
-                trailingIcon
-              />
+              <div className="h-[56px] self-stretch w-full rounded-[4px_4px_0px_0px] flex flex-col items-start relative">
+                  <div className="flex flex-col items-start gap-[10px] relative self-stretch w-full flex-[0_0_auto] bg-white rounded-[15px] border border-solid border-[#79747e]">
+                    <div className="flex items-center pl-[16px] pr-0 py-[4px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
+                      <div className="flex flex-col h-[35px] items-start justify-center relative flex-1 grow">
+                        <div className="inline-flex items-center relative flex-[0_0_auto]">
+                          <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[16px] tracking-[0] leading-[22.4px] whitespace-nowrap">
+                            <input type="password" size="58" className="border-none outline-none "></input>
+                          </div>
+                        </div>
+                        <div className="inline-flex items-center px-[4px] py-0 absolute top-[-16px] left-[-4px] bg-white">
+                          <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[14px] tracking-[0] leading-[19.6px] whitespace-nowrap">
+                            Password
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flex-col w-[48px] h-[44px] items-center justify-center gap-[10px] p-[12px] relative">
+                        <EyeOff className="!relative !w-[24px] !h-[24px]" color="#1F1F1F" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               <div className="flex w-[486px] items-center gap-[252px] relative flex-[0_0_auto]">
                 <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">
-                  <CheckboxFalse className="!relative !w-[24px] !h-[24px]" color="#313131" />
+                  <input type="checkbox" className="!relative !w-[24px] !h-[24px]" color="#313131" />
                   <div className="relative w-fit font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-t text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap [font-style:var(--body-2-regular-font-style)]">
                     Ingat Saya
                   </div>
                 </div>
                 <div className="relative w-[135px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-primary-2 text-[length:var(--body-2-regular-font-size)] text-right tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] [font-style:var(--body-2-regular-font-style)]">
-                  Lupa Password
+                  <a href="/forgotpassword" className="text-black">Lupa Password</a>
                 </div>
               </div>
             </div>

@@ -3,6 +3,7 @@ import { FiturDeteksi } from "../../components/FiturDeteksi";
 import { FiturJadwalSampah } from "../../components/FiturJadwalSampah";
 import { FiturTagihanIuran } from "../../components/FiturTagihanIuran";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
+import SideBarAdmin from "../../components/SideBarAdmin/SideBarAdmin";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
 import { SubJudulFix } from "../../components/SubJudulFix";
 
@@ -354,7 +355,7 @@ export const HomeAdmin = () => {
         />
         <a href="/login"></a>
         <NavbarUserFitur className="!fixed !left-[324px] !top-0" profilArrowDown="../../../static/img/arrow-down-2-3.svg" />
-        <SideBarWrapper
+        <SideBarAdmin
           className="!h-[2248px] !fixed !left-0 !top-0"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
           sideBarDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"

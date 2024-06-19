@@ -30,7 +30,7 @@ export const TagihanStatus = () => {
               </div>
             </div>
           </div>
-          <Button className="!absolute !left-[455px] !top-[389px]" property1="default" text="Hubungi Admin" />
+          <Button className="!cursor-pointer !absolute !left-[455px] !top-[389px]" property1="default" text="Hubungi Admin" navigateTo="/chatpengelolauser" />
           <img className="absolute w-[948px] h-px top-[358px] left-12 object-cover" alt="Line" src="../../../static/img/line-23.svg" />
           <div className="flex flex-col w-[588px] items-start absolute top-6 left-[228px] shadow-drop-shadow">
             <div className="flex items-center gap-[50px] p-6 relative self-stretch w-full flex-[0_0_auto] bg-primary-2 rounded-[10px_10px_0px_0px]">
@@ -107,22 +107,25 @@ export const TagihanStatus = () => {
         <div className="absolute w-[996px] h-[62px] top-[86px] left-[324px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
           <img className="absolute w-[337px] h-[5px] top-[57px] left-[330px]" alt="Line" src="../../../static/img/line-21.svg" />
           <MenuItem
-            className="!px-0 !py-2.5 !absolute !left-[429px] !top-2.5"
+            className="!cursor-pointer !px-0 !py-2.5 !absolute !left-[429px] !top-2.5"
             divClassName="!text-tersier-2"
             property1="default"
             text="Status Pembayaran"
+            navigateTo="/tagihanstatus"
           />
           <MenuItem
-            className="!absolute !left-[107px] !top-2.5"
+            className="!cursor-pointer !absolute !left-[107px] !top-2.5"
             divClassName="!text-tersier-2"
             property1="default"
             text="Belum Bayar"
+            navigateTo="/tagihanbelum"
           />
           <MenuItem
-            className="!absolute !left-[785px] !top-2.5"
+            className="!cursor-pointer !absolute !left-[785px] !top-2.5"
             divClassName="!text-tersier-2"
             property1="default"
             text="Selesai"
+            navigateTo="/tagihanselesai"
           />
         </div>
         <SideBarWrapper

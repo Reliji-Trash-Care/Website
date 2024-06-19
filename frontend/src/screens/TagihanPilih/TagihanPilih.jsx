@@ -168,7 +168,7 @@ export const TagihanPilih = () => {
               <img className="relative w-[414px] h-px mb-[-0.50px] object-cover" alt="Line" src="../../../static/img/line-15-2.svg" />
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" />
+              <input type="radio" className="" />
               <img className="relative w-[32px] h-[32px]" alt="Call" src="../../../static/img/call.png" />
               <div className="relative w-fit font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
                 Hubungi Admin
@@ -189,22 +189,25 @@ export const TagihanPilih = () => {
         <div className="absolute w-[996px] h-[62px] top-[86px] left-[324px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
           <img className="absolute w-[337px] h-[5px] top-[57px] left-0" alt="Line" src="../../../static/img/line-21.svg" />
           <MenuItem
-            className="!absolute !left-[107px] !top-[10px]"
+            className="!cursor-pointer !absolute !left-[107px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Belum Bayar"
+            navigateTo="/tagihanbelum"
           />
           <MenuItem
-            className="!px-0 !py-[10px] !absolute !left-[428px] !top-[10px]"
+            className="!cursor-pointer !px-0 !py-[10px] !absolute !left-[428px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Status Pembayaran"
+            navigateTo="/tagihanstatus"
           />
           <MenuItem
-            className="!absolute !left-[785px] !top-[10px]"
+            className="!cursor-pointer !absolute !left-[785px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Selesai"
+            navigateTo="/tagihanselesai"
           />
         </div>
         <SideBarWrapper

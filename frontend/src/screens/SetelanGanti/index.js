@@ -1,1 +1,0 @@
-export { SetelanGanti } from "./SetelanGanti";
