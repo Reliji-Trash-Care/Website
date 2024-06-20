@@ -130,7 +130,7 @@ export const SignUp = () => {
                 </div>
               </div>
               <div className="relative w-[486px] h-[74px]">
-                <Link to="/homeadmin">
+                <Link to="/login">
                 <Button
                   className="!h-[46px] !rounded-[15px] !flex !absolute !left-0 !w-[486px] !top-0"
                   divClassName="!mt-[unset]"

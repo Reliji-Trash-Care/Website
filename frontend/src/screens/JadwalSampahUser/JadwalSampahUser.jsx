@@ -1,9 +1,17 @@
 import React from "react";
-import { Day } from "../../components/Day";
+import { Calendar } from 'rsuite';
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
 import { Icon1 } from "../../icons/Icon1";
 import { TypeFiChevronLeftSize24ColorWhite } from "../../icons/TypeFiChevronLeftSize24ColorWhite";
+import { Button } from 'rsuite';
+import 'rsuite/styles/index.less'; // or 'rsuite/dist/rsuite.min.css'
+
+function App() {
+  return <Button appearance="primary">Hello World</Button>;
+}
+
+export default App;
 
 export const JadwalSampahUser = () => {
   return (
@@ -33,230 +41,9 @@ export const JadwalSampahUser = () => {
                   alt="Divider"
                   src="../../../static/img/divider.svg"
                 />
-                <div className="flex items-center relative self-stretch w-full flex-[0_0_auto]">
-                  <Day
-                    className="!flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="Minggu"
-                  />
-                  <Day
-                    className="!flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="Senin"
-                  />
-                  <Day
-                    className="!flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="Selasa"
-                  />
-                  <Day
-                    className="!flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="Rabu"
-                  />
-                  <Day
-                    className="!flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="Kamis"
-                  />
-                  <Day
-                    className="!flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="Jumat"
-                  />
-                  <Day
-                    className="!flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="Sabtu"
-                  />
-                </div>
               </div>
               <div className="flex flex-col items-start gap-px relative flex-1 self-stretch w-full grow">
-                <div className="flex items-start gap-px relative flex-1 self-stretch w-full grow">
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-variable-collection-grey !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="31"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-tersier-2 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="1"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-tersier-2 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="2"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-tersier-2 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="3"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-tersier-2 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="4"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="5"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="6"
-                  />
-                </div>
-                <div className="flex items-start gap-px relative flex-1 self-stretch w-full grow">
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="7"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="8"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-additional-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="9"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-tersier-2 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="10"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="11"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="12"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="13"
-                  />
-                </div>
-                <div className="flex items-start gap-px relative flex-1 self-stretch w-full grow bg-primary-1">
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="14"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="15"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="16"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-[unset] !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="17"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !rounded-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="18"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="19"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="20"
-                  />
-                </div>
-                <div className="flex items-start gap-px relative flex-1 self-stretch w-full grow">
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="21"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="22"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="23"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="24"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="25"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="26"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="27"
-                  />
-                </div>
-                <div className="flex items-start gap-px relative flex-1 self-stretch w-full grow">
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="28"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="29"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="30"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-variable-collection-grey !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="1"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-variable-collection-grey !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="2"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-secondary-2 !w-[unset]"
-                    divClassName="!text-primary-1 !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="3"
-                  />
-                  <Day
-                    className="!self-stretch !h-[unset] !flex-1 !grow !bg-primary-1 !w-[unset]"
-                    divClassName="!text-variable-collection-grey !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                    text="4"
-                  />
-                </div>
+                <Calendar />
               </div>
             </div>
           </div>
