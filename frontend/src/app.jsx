@@ -36,6 +36,8 @@ import { BeritaLatestUser } from './screens/BeritaLatestUser/BeritaLatestUser';
 import { SetelanProfilAdmin } from './screens/Setelan/SetelanProfilAdmin';
 import { SetelanNotifikasiAdmin } from './screens/Setelan/SetelanNotifikasiAdmin';
 import { SetelanGantiAdmin } from './screens/Setelan/SetelanGantiAdmin';
+import WastePrediction from './components/WastePrediction';
+import WhatsApp from './screens/WhatsApp/WhatsApp';
 
 const App = () => {
   return (
@@ -78,6 +80,9 @@ const App = () => {
     <Route path='/tagihanadmin' element={<TagihanAdmin/>} />
     <Route path='/chatpengelolaadmin' element={<ChatPengelolaAdmin/>} />
     <Route path='/deteksiadmin' element={<DeteksiAdmin/>} />
+    <Route path='/wasteprediction' element={<WastePrediction/>} />
+    <Route path='/whatsapp' element={<WhatsApp/>} />
+  
     </Routes>
     </div>
     </Router>

@@ -131,7 +131,8 @@ export const TagihanPilih = () => {
               </div>
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" />
+            <input type="radio" className="!border-tersier-2 !relative !bg-primary-1" />
+              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
               <BankMandiri
                 MANDIRIClassName="!h-[40px]"
                 className="!h-[40px] !w-[56px] !relative"
