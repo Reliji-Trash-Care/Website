@@ -4,50 +4,95 @@ import { Default } from "../../components/Default";
 import { Divider } from "../../components/Divider";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
+import axios from "axios";
 
 export const DeteksiUserAI = () => {
 
   const [selectedFile, setSelectedFile] = useState(null);
-  const [predictionResult, setPredictionResult] = useState(null); // State untuk hasil prediksi
+  const [prediction, setPrediction] = useState(null);
+  const [previewUrl, setPreviewUrl] = useState(null);
 
-  const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-    // You can add additional logic here, like uploading the file to a server
-  };
+  const PREDICTIONS_URL = '/api/predict';
+  const getPredictions = async () => {
+    const formData = new FormData();
+    formData.append('file', selectedFile);
 
-  const handleButton = () => {
-    document.getElementById("fileInput").click();
-  };
-
-  const handleButtonClick = async () => {
-    if (selectedFile) {
-      try {
-        const formData = new FormData();
-        formData.append("image", selectedFile);
-
-        // Ganti dengan URL endpoint model AI Anda
-        const response = await fetch("https://flask-docker.1i96sz0o1upt.us-south.codeengine.appdomain.cloud/predict", {
-          method: "POST",
-          body: formData,
-        });
-
-        if (!response.ok) {
-          throw new Error("Gagal mendapatkan respons dari server.");
-        }
-
-        const data = await response.json();
-        setPredictionResult(data.prediction); // Mengatur hasil prediksi ke state
-
-      } catch (error) {
-        console.error("Terjadi kesalahan:", error);
-        // Handle error state or display error message to user
+    const response = await axios.post(PREDICTIONS_URL, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
       }
+    });
+
+    return response.data;
+  };
+
+
+  const handleFileChange = () => {
+    if (event.target.files) {
+      setSelectedFile(event.target.files[0]);
+      setPreviewUrl(URL.createObjectURL(event.target.files[0]));
     }
   };
 
+  const handleSubmit = async () => {
+    event.preventDefault();
+
+    if (!selectedFile) {
+      console.error('Choose an image first!')
+      return;
+    }
+
+    try {
+      const result = await getPredictions(selectedFile);
+      setPrediction(result);
+      console.log(result)
+    } catch (error) {
+      console.error('Error making prediction:', error);
+    }
+  };
+
+  // const [selectedFile, setSelectedFile] = useState(null);
+  // const [predictionResult, setPredictionResult] = useState(null); // State untuk hasil prediksi
+
+  // const handleFileChange = (event) => {
+  //   setSelectedFile(event.target.files[0]);
+  //   // You can add additional logic here, like uploading the file to a server
+  // };
+
+  // const handleButton = () => {
+  //   document.getElementById("fileInput").click();
+  // };
+
+  // const handleButtonClick = async () => {
+  //   if (selectedFile) {
+  //     try {
+  //       const formData = new FormData();
+  //       formData.append("file", selectedFile);
+
+  //       const api_endpoint = '/api/predict';
+  //       const response = await axios.post(api_endpoint, formData, {
+  //         headers: {
+  //           'Content-Type': 'multipart/form-data'
+  //         }
+  //       });
+
+  //       // if (!response.ok) {
+  //       //   throw new Error("Gagal mendapatkan respons dari server.");
+  //       // }
+
+  //       const data = await response.data;
+  //       setPredictionResult(data); // Mengatur hasil prediksi ke state
+  //       console.log(data)
+  //     } catch (error) {
+  //       console.error("Terjadi kesalahan:", error);
+  //       // Handle error state or display error message to user
+  //     }
+  //   }
+  // };
+
   const handleDeleteClick = () => {
     setSelectedFile(null);
-    setPredictionResult(null); // Mengatur kembali state hasil prediksi jika ada
+    setPrediction(null); // Mengatur kembali state hasil prediksi jika ada
   };
 
   return (
@@ -56,8 +101,8 @@ export const DeteksiUserAI = () => {
         <div className="absolute w-[1674px] h-[1785px] top-[88px] left-[242px]">
           <div className="absolute w-[1674px] h-[1674px] top-[111px] left-0 bg-[#397d54b2] rounded-[837px] blur-[550px] opacity-[0.36]" />
           <div className="absolute w-[1035px] h-[568px] top-0 left-[82px] bg-primary-1 rounded-[15px] shadow-drop-shadow-2" />
-          
-          
+
+
           <div className="shadow-drop-shadow-2 flex flex-col w-[462px] h-[450px] items-start gap-[16px] p-[24px] absolute top-[67px] left-[616px] bg-primary-1 rounded-[var(--brand-radi-xl)]">
             <div className="relative w-[414px] h-[61px] rounded-[10px]">
               <div className="flex flex-col w-[414px] h-[48px] items-start gap-[var(--brand-spacing-xxxs)] relative top-[7px]">
@@ -81,12 +126,12 @@ export const DeteksiUserAI = () => {
               Format yang didukung .jpg dan .png
             </p>
 
-            
+
             <div className="flex w-[414px] items-start justify-end gap-[16px] relative flex-[0_0_auto] mb-[-10.00px]">
               <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" />
             </div>
           </div>
-          
+
           <div className="flex flex-col w-[462px] h-[450px] items-start gap-[16px] p-[24px] absolute top-[67px] left-[128px] bg-primary-1 rounded-[var(--brand-radi-xl)] shadow-drop-shadow-2">
             <div className="relative w-[414px] h-[61px] rounded-[10px]">
               <div className="flex flex-col w-[414px] h-[48px] items-start gap-[var(--brand-spacing-xxxs)] relative top-[7px]">
@@ -102,55 +147,72 @@ export const DeteksiUserAI = () => {
               <div className="flex flex-col w-[414px] h-[243px] items-center justify-center gap-[12px] relative bg-primary-1 rounded-[var(--brand-radi-mlg)] border border-solid border-primary-2">
                 <img
                   className="w-full h-full object-cover rounded-[var(--brand-radi-mlg)]"
-                  src={URL.createObjectURL(selectedFile)}
+                  src={previewUrl}
                   alt="Selected File"
                 />
               </div>
             ) : (
-            <div className="flex flex-col w-[414px] h-[243px] items-center justify-center gap-[12px] pt-[var(--brand-spacing-lg)] pr-[var(--brand-spacing-lg)] pb-[var(--brand-spacing-lg)] pl-[var(--brand-spacing-lg)] relative bg-alias-bgcolor-light rounded-[var(--brand-radi-mlg)] border border-dashed border-alias-strokecolor-primary">
-              <img className="relative w-[42px] h-[42px]" alt="Upload" src="../../../static/img/upload.svg" />
-              <div className="flex flex-col items-center gap-[8px] self-stretch w-full relative flex-[0_0_auto]">
-                <div className="flex items-start justify-center gap-[4px] relative self-stretch w-full flex-[0_0_auto]">
-                  <div className="relative w-fit mt-[-1.00px] font-body-small font-[number:var(--body-small-font-weight)] text-tersier-2 text-[length:var(--body-small-font-size)] tracking-[var(--body-small-letter-spacing)] leading-[var(--body-small-line-height)] whitespace-nowrap [font-style:var(--body-small-font-style)]">
-                    Upload disini
+              <div className="flex flex-col w-[414px] h-[243px] items-center justify-center gap-[12px] pt-[var(--brand-spacing-lg)] pr-[var(--brand-spacing-lg)] pb-[var(--brand-spacing-lg)] pl-[var(--brand-spacing-lg)] relative bg-alias-bgcolor-light rounded-[var(--brand-radi-mlg)] border border-dashed border-alias-strokecolor-primary">
+                <img className="relative w-[42px] h-[42px]" alt="Upload" src="../../../static/img/upload.svg" />
+                <div className="flex flex-col items-center gap-[8px] self-stretch w-full relative flex-[0_0_auto]">
+                  <div className="flex items-start justify-center gap-[4px] relative self-stretch w-full flex-[0_0_auto]">
+                    <div className="relative w-fit mt-[-1.00px] font-body-small font-[number:var(--body-small-font-weight)] text-tersier-2 text-[length:var(--body-small-font-size)] tracking-[var(--body-small-letter-spacing)] leading-[var(--body-small-line-height)] whitespace-nowrap [font-style:var(--body-small-font-style)]">
+                      Upload disini
+                    </div>
                   </div>
+                  <Divider
+                    borderWeight="w-text"
+                    className="!flex-[0_0_auto] !w-[201px]"
+                    divClassName="!text-alias-textcolor-secdefault"
+                    lineClassName="!bg-alias-strokecolor-lightgrey"
+                    lineClassNameOverride="!bg-alias-strokecolor-lightgrey"
+                    size="full"
+                    text="atau"
+                    variants="solid"
+                  />
+                  <input
+                    className="!border-primary-2 !flex-[0_0_auto] !border-[3px] !border-solid !flex !bg-primary-1 !w-[149px]"
+                    // divClassName="!mr-[-4.50px] !mt-[-3.00px] !text-primary-2 !ml-[-4.50px]"
+                    // property1="default"
+                    // text="Masukkan file anda"
+                    onChange={handleFileChange}
+                    type="file"
+                    accept="image/*"
+                  />
+                  <input
+                    id="fileInput"
+                    type="file"
+                    accept=".jpg, .png"
+                    style={{ display: 'none' }}
+                    onChange={handleFileChange}
+                  />
                 </div>
-                <Divider
-                  borderWeight="w-text"
-                  className="!flex-[0_0_auto] !w-[201px]"
-                  divClassName="!text-alias-textcolor-secdefault"
-                  lineClassName="!bg-alias-strokecolor-lightgrey"
-                  lineClassNameOverride="!bg-alias-strokecolor-lightgrey"
-                  size="full"
-                  text="atau"
-                  variants="solid"
-                />
-                <Button
-                  className="!border-primary-2 !flex-[0_0_auto] !border-[3px] !border-solid !flex !bg-primary-1 !w-[149px]"
-                  divClassName="!mr-[-4.50px] !mt-[-3.00px] !text-primary-2 !ml-[-4.50px]"
-                  property1="default"
-                  text="Masukkan file anda"
-                  onClick={handleButton}
-                />
-                <input
-                  id="fileInput"
-                  type="file"
-                  accept=".jpg, .png"
-                  style={{ display: 'none' }}
-                  onChange={handleFileChange}
-                />
               </div>
-            </div>
             )}
             <p className="relative self-stretch h-[20px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-variable-collection-darkgrey text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:1] [-webkit-box-orient:vertical] [font-style:var(--body-2-regular-font-style)]">
               Format yang didukung .jpg dan .png
             </p>
             <div className="flex w-[414px] items-start justify-end gap-[16px] relative flex-[0_0_auto] mb-[-10.00px]">
               {selectedFile && (
-                    <Button className="!flex-[0_0_auto]" property1="default" text="Hapus" onClick={handleDeleteClick} />
-                  )}
-              <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" onClick={handleButtonClick} />
+                <Button className="!flex-[0_0_auto]" property1="default" text="Hapus" onClick={handleDeleteClick} />
+              )}
+              <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" onClick={handleSubmit} />
             </div>
+            <p>Hasil prediksi</p>
+
+            {
+              prediction ? (
+                <div>
+
+                  {prediction.label} <br />
+                  {prediction.category} <br />
+                  {prediction.handling_instructions}
+                </div>
+              ) : (
+                <span></span>
+              )
+            }
+
           </div>
         </div>
         <div className="inline-flex items-start gap-[9.46px] px-[30.28px] py-[15.14px] absolute top-[-1816px] left-[321px] bg-primary-2 rounded-[10px] shadow-[0px_3.78px_4.73px_#00000066]">

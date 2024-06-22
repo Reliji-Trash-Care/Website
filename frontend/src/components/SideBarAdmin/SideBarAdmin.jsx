@@ -21,9 +21,7 @@ export const SideBarAdmin = ({
   sideBarPropertyDefaultClassName,
   history, // tambahkan history dari react-router
 }) => {
-  const navigateTo = (path) => {
-    history.push(path);
-  };
+  
 
   return (
     <div
@@ -46,7 +44,6 @@ export const SideBarAdmin = ({
         divClassName="!text-primary-2"
         paper="../../../static/img/paper-2.svg"
         property1="default"
-        onClick={() => navigateTo("/beritauser")} // navigasi ke halaman beritauser
       />
       <JadwalAdmin
         calendar="../../../static/img/calendar-4.svg"
@@ -59,26 +56,22 @@ export const SideBarAdmin = ({
         divClassName="!text-primary-2"
         property1="default"
         wallet="../../../static/img/wallet-2.svg"
-        onClick={() => navigateTo("/tagihanadmin")} // navigasi ke halaman tagihanadmin
       />
       <ChatAdmin
         chat="../../../static/img/chat-2.svg"
         className="!flex-[0_0_auto]"
         divClassName="!text-primary-2"
         property1="default"
-        onClick={() => navigateTo("/chatpengelolaadmin")} // navigasi ke halaman chatpengelolaadmin
       />
       <DeteksiAdmin
         className="!flex-[0_0_auto]"
         deteksi="../../../static/img/deteksi-2.svg"
         property1="default"
-        onClick={() => navigateTo("/deteksiadmin")} // navigasi ke halaman deteksiadmin
       />
       <SetelanAdmin
         className="!flex-[0_0_auto]"
         property1="default"
         setting="../../../static/img/setting-2.svg"
-        onClick={() => navigateTo("/setelanprofil")} // navigasi ke halaman setelanprofil
       />
     </div>
   );

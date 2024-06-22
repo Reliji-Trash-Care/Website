@@ -22,12 +22,7 @@ export const BeritaDetailHotUser = () => {
             <p className="absolute w-[994px] top-[237px] left-[324px] font-heading-7-regular font-[number:var(--heading-7-regular-font-weight)] text-primary-1 text-[length:var(--heading-7-regular-font-size)] tracking-[var(--heading-7-regular-letter-spacing)] leading-[var(--heading-7-regular-line-height)] [font-style:var(--heading-7-regular-font-style)]">
               21 Maret 2024, 03.00 WIB
             </p>
-            <SideBarWrapper
-              beritaPropertyDefaultClassName="!flex-[0_0_auto] !bg-secondary-1"
-              className="!h-[4674px] !absolute !left-0 !top-0"
-              deteksiDeteksi="../../../static/img/deteksi-3.svg"
-              logoPlaceholderGroup="../../../static/img/group-7-2.png"
-            />
+            
             <div className="absolute w-[792px] h-[3735px] top-[122px] left-[426px]">
               <ContainerBerita2
                 className="!absolute !left-0 !top-0"
@@ -137,11 +132,7 @@ export const BeritaDetailHotUser = () => {
               </div>
             </div>
           </div>
-          <NavbarUserFitur
-            className="!absolute !left-[324px] !top-0"
-            profilArrowDown="../../../static/img/arrow-down-2-3.svg"
-            profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-3.png"
-          />
+          
           <div className="absolute w-[996px] h-[554px] top-[3912px] left-[325px]">
             <div className="absolute w-[486px] h-[491px] top-[63px] left-0 bg-primary-1 rounded-[15px] shadow-drop-shadow-2">
               <div className="flex flex-col w-[451px] items-start gap-[32px] absolute top-[16px] left-[18px]">
@@ -305,6 +296,17 @@ export const BeritaDetailHotUser = () => {
             </button>
           </div>
         </div>
+        <SideBarWrapper
+              beritaPropertyDefaultClassName="!fixed !flex-[0_0_auto] !bg-secondary-1"
+              className="!h-[4674px] !absolute !left-0 !top-0"
+              deteksiDeteksi="../../../static/img/deteksi-3.svg"
+              logoPlaceholderGroup="../../../static/img/group-7-2.png"
+            />
+        <NavbarUserFitur
+            className="!fixed !left-[324px] !top-0"
+            profilArrowDown="../../../static/img/arrow-down-2-3.svg"
+            profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-3.png"
+          />
       </div>
     </div>
   );
