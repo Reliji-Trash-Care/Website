@@ -107,28 +107,29 @@ export const DeteksiUserAI = () => {
             <div className="relative w-[414px] h-[61px] rounded-[10px]">
               <div className="flex flex-col w-[414px] h-[48px] items-start gap-[var(--brand-spacing-xxxs)] relative top-[7px]">
                 <div className="relative self-stretch mt-[-1.00px] font-heading-8-bold font-[number:var(--heading-8-bold-font-weight)] text-tersier-2 text-[length:var(--heading-8-bold-font-size)] tracking-[var(--heading-8-bold-letter-spacing)] leading-[var(--heading-8-bold-line-height)] [font-style:var(--heading-8-bold-font-style)]">
-                  Scan Sampah
+                  Hasil Deteksi Sampah
                 </div>
                 <p className="relative self-stretch h-[20px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-tersier-2 text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:1] [-webkit-box-orient:vertical] [font-style:var(--body-2-regular-font-style)]">
-                  Aktifkan kamera untuk mendeteksi sampah
+                  Ayo ketahui jenis sampah dan cara penanganannya !
                 </p>
               </div>
+
             </div>
             <div className="flex flex-col w-[414px] h-[243px] items-center justify-center gap-[12px] pt-[var(--brand-spacing-lg)] pr-[var(--brand-spacing-lg)] pb-[var(--brand-spacing-lg)] pl-[var(--brand-spacing-lg)] relative bg-primary-1 rounded-[var(--brand-radi-mlg)] border border-dashed border-primary-2">
-              <img className="relative w-[45px] h-[44px]" alt="Camera" src="../../../static/img/camera-1.svg" />
-              <div className="flex flex-col items-center gap-[8px] self-stretch w-full relative flex-[0_0_auto] cursor-pointer">
-                <Default className="!w-[136px]" text="Buka Kamera" />
-              </div>
-            </div>
+            
+            {
+              prediction ? (
+                <div className="justify-center"> 
 
+                  {prediction.label} <br />
+                  {prediction.category} <br />
+                  {prediction.handling_instructions}
+                </div>
+              ) : (
+                <span></span>
+              )
+            }
 
-            <p className="relative self-stretch h-[20px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-variable-collection-darkgrey text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:1] [-webkit-box-orient:vertical] [font-style:var(--body-2-regular-font-style)]">
-              Format yang didukung .jpg dan .png
-            </p>
-
-
-            <div className="flex w-[414px] items-start justify-end gap-[16px] relative flex-[0_0_auto] mb-[-10.00px]">
-              <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" />
             </div>
           </div>
 
@@ -198,20 +199,6 @@ export const DeteksiUserAI = () => {
               )}
               <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" onClick={handleSubmit} />
             </div>
-            <p>Hasil prediksi</p>
-
-            {
-              prediction ? (
-                <div>
-
-                  {prediction.label} <br />
-                  {prediction.category} <br />
-                  {prediction.handling_instructions}
-                </div>
-              ) : (
-                <span></span>
-              )
-            }
 
           </div>
         </div>
