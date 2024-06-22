@@ -1,32 +1,53 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Button } from "../../components/Button";
 import { Default } from "../../components/Default";
 import { Divider } from "../../components/Divider";
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
 
-export const DeteksiUser = () => {
+export const DeteksiUserAI = () => {
 
   const [selectedFile, setSelectedFile] = useState(null);
-
-  const [streaming, setStreaming] = useState(false);
-  const [photo, setPhoto] = useState(null);
-  const videoRef = useRef(null);
-  const canvasRef = useRef(null);
+  const [predictionResult, setPredictionResult] = useState(null); // State untuk hasil prediksi
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
     // You can add additional logic here, like uploading the file to a server
   };
 
-  const handleButtonClick = () => {
+  const handleButton = () => {
     document.getElementById("fileInput").click();
   };
 
-  
+  const handleButtonClick = async () => {
+    if (selectedFile) {
+      try {
+        const formData = new FormData();
+        formData.append("image", selectedFile);
+
+        // Ganti dengan URL endpoint model AI Anda
+        const response = await fetch("https://flask-docker.1i96sz0o1upt.us-south.codeengine.appdomain.cloud/predict", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) {
+          throw new Error("Gagal mendapatkan respons dari server.");
+        }
+
+        const data = await response.json();
+        setPredictionResult(data.prediction); // Mengatur hasil prediksi ke state
+
+      } catch (error) {
+        console.error("Terjadi kesalahan:", error);
+        // Handle error state or display error message to user
+      }
+    }
+  };
+
   const handleDeleteClick = () => {
     setSelectedFile(null);
-    setPhoto(null);
+    setPredictionResult(null); // Mengatur kembali state hasil prediksi jika ada
   };
 
   return (
@@ -35,6 +56,7 @@ export const DeteksiUser = () => {
         <div className="absolute w-[1674px] h-[1785px] top-[88px] left-[242px]">
           <div className="absolute w-[1674px] h-[1674px] top-[111px] left-0 bg-[#397d54b2] rounded-[837px] blur-[550px] opacity-[0.36]" />
           <div className="absolute w-[1035px] h-[568px] top-0 left-[82px] bg-primary-1 rounded-[15px] shadow-drop-shadow-2" />
+          
           
           <div className="shadow-drop-shadow-2 flex flex-col w-[462px] h-[450px] items-start gap-[16px] p-[24px] absolute top-[67px] left-[616px] bg-primary-1 rounded-[var(--brand-radi-xl)]">
             <div className="relative w-[414px] h-[61px] rounded-[10px]">
@@ -47,27 +69,13 @@ export const DeteksiUser = () => {
                 </p>
               </div>
             </div>
-            {photo ? (
-              <div className="flex flex-col w-[414px] h-[243px] items-center justify-center gap-[12px] relative bg-primary-1 rounded-[var(--brand-radi-mlg)] border border-solid border-primary-2">
-                <img
-                  className="w-full h-full object-cover rounded-[var(--brand-radi-mlg)]"
-                  src={photo}
-                  alt="Captured"
-                />
-              </div>
-            ) : streaming ? (
-              <div className="flex flex-col w-[414px] h-[243px] items-center justify-center gap-[12px] relative bg-primary-1 rounded-[var(--brand-radi-mlg)] border border-solid border-primary-2">
-                <video ref={videoRef} className="w-full h-full object-cover rounded-[var(--brand-radi-mlg)]" autoPlay />
-                <Button className="!flex-[0_0_auto]" property1="default" text="Ambil Foto" onClick={handleTakePhoto} />
-              </div>
-            ) : (
             <div className="flex flex-col w-[414px] h-[243px] items-center justify-center gap-[12px] pt-[var(--brand-spacing-lg)] pr-[var(--brand-spacing-lg)] pb-[var(--brand-spacing-lg)] pl-[var(--brand-spacing-lg)] relative bg-primary-1 rounded-[var(--brand-radi-mlg)] border border-dashed border-primary-2">
               <img className="relative w-[45px] h-[44px]" alt="Camera" src="../../../static/img/camera-1.svg" />
               <div className="flex flex-col items-center gap-[8px] self-stretch w-full relative flex-[0_0_auto] cursor-pointer">
-                <Default className="!w-[136px]" text="Buka Kamera" onClick={handleStartCamera} />
+                <Default className="!w-[136px]" text="Buka Kamera" />
               </div>
             </div>
-            )}
+
 
             <p className="relative self-stretch h-[20px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-variable-collection-darkgrey text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap overflow-hidden text-ellipsis [display:-webkit-box] [-webkit-line-clamp:1] [-webkit-box-orient:vertical] [font-style:var(--body-2-regular-font-style)]">
               Format yang didukung .jpg dan .png
@@ -75,11 +83,7 @@ export const DeteksiUser = () => {
 
             
             <div className="flex w-[414px] items-start justify-end gap-[16px] relative flex-[0_0_auto] mb-[-10.00px]">
-            {photo && (
-                <Button className="!flex-[0_0_auto]" property1="default" text="Hapus" onClick={handleDeleteClick} />
-              )}
               <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" />
-              <canvas ref={canvasRef} style={{ display: 'none' }} width="414" height="243" />
             </div>
           </div>
           
@@ -126,7 +130,7 @@ export const DeteksiUser = () => {
                   divClassName="!mr-[-4.50px] !mt-[-3.00px] !text-primary-2 !ml-[-4.50px]"
                   property1="default"
                   text="Masukkan file anda"
-                  onClick={handleButtonClick}
+                  onClick={handleButton}
                 />
                 <input
                   id="fileInput"
@@ -145,7 +149,7 @@ export const DeteksiUser = () => {
               {selectedFile && (
                     <Button className="!flex-[0_0_auto]" property1="default" text="Hapus" onClick={handleDeleteClick} />
                   )}
-              <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" />
+              <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" onClick={handleButtonClick} />
             </div>
           </div>
         </div>

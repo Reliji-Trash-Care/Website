@@ -3,7 +3,7 @@ import React from "react";
 import { useReducer } from "react";
 import { useNavigate } from 'react-router-dom';
 
-export const Button = ({ property1, className, divClassName, text = "Button" ,navigateTo}) => {
+export const Button = ({ property1, className, divClassName, text = "Button" ,onClick ,navigateTo}) => {
   const [state, dispatch] = useReducer(reducer, {
     property1: property1 || "default",
   });
@@ -12,7 +12,7 @@ export const Button = ({ property1, className, divClassName, text = "Button" ,na
 
   return (
     <button
-      className={`all-[unset] box-border inline-flex items-center gap-[10px] px-[16px] py-[10px] rounded-[10px] justify-center relative ${
+      className={`all-[unset] box-border inline-flex items-center gap-[10px] px-[16px] py-[10px] rounded-[10px] justify-center relative cursor-pointer ${
         state.property1 === "variant-2" ? "bg-additional-1" : "bg-primary-2"
       } ${className}`}
       onMouseLeave={() => {
@@ -22,7 +22,11 @@ export const Button = ({ property1, className, divClassName, text = "Button" ,na
         dispatch("mouse_enter");
       }}
       onClick={() => {
-        navigate(navigateTo);
+        if (onClick) {
+          onClick();
+        } else if (navigateTo) {
+          navigate(navigateTo);
+        }
       }}
     >
       <div
