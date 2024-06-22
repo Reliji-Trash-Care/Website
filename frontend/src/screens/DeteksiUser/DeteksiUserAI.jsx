@@ -108,7 +108,7 @@ export const DeteksiUserAI = () => {
           <div className="absolute w-[1035px] h-[568px] top-0 left-[82px] bg-primary-1 rounded-[15px] shadow-drop-shadow-2" />
 
 
-          <div className="shadow-drop-shadow-2 flex flex-col w-[462px] h-[450px] items-start gap-[16px] p-[24px] absolute top-[67px] left-[616px] bg-primary-1 rounded-[var(--brand-radi-xl)]">
+          <div className="rounded-lg shadow-drop-shadow-2 flex flex-col w-[462px] h-[450px] items-start gap-[16px] p-[24px] absolute top-[67px] left-[616px] bg-primary-1">
             <div className="relative w-[414px] h-[61px] rounded-[10px]">
               <div className="flex flex-col w-[414px] h-[48px] items-start gap-[var(--brand-spacing-xxxs)] relative top-[7px]">
                 <div className="relative self-stretch mt-[-1.00px] font-heading-8-bold font-[number:var(--heading-8-bold-font-weight)] text-tersier-2 text-[length:var(--heading-8-bold-font-size)] tracking-[var(--heading-8-bold-letter-spacing)] leading-[var(--heading-8-bold-line-height)] [font-style:var(--heading-8-bold-font-style)]">
@@ -158,7 +158,7 @@ export const DeteksiUserAI = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-[462px] h-[450px] items-start gap-[16px] p-[24px] absolute top-[67px] left-[128px] bg-primary-1 rounded-[var(--brand-radi-xl)] shadow-drop-shadow-2">
+          <div className="rounded-lg flex flex-col w-[462px] h-[450px] items-start gap-[16px] p-[24px] absolute top-[67px] left-[128px] bg-primary-1 ] shadow-drop-shadow-2">
             <div className="relative w-[414px] h-[61px] rounded-[10px]">
               <div className="flex flex-col w-[414px] h-[48px] items-start gap-[var(--brand-spacing-xxxs)] relative top-[7px]">
                 <div className="relative self-stretch mt-[-1.00px] font-heading-8-bold font-[number:var(--heading-8-bold-font-weight)] text-tersier-2 text-[length:var(--heading-8-bold-font-size)] tracking-[var(--heading-8-bold-letter-spacing)] leading-[var(--heading-8-bold-line-height)] [font-style:var(--heading-8-bold-font-style)]">
