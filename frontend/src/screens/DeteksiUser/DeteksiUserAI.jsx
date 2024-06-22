@@ -211,7 +211,7 @@ export const DeteksiUserAI = () => {
                       accept="image/*"
                     />
                     {/* font-body-2-bold w-fit mt-[-1.00px] tracking-[var(--body-2-bold-letter-spacing)] text-[length:var(--body-2-bold-font-size)] [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] text-center whitespace-nowrap leading-[var(--body-2-bold-line-height)] relative */}
-                    <span className=" cursor-pointer rounded font-body-2-bold !border-primary-2 !border-[3px] !border-solid !flex !bg-primary-1 !w-full !justify-center !items-center mt-[-1.00px] tracking-[var(--body-2-bold-letter-spacing)] text-[length:var(--body-2-bold-font-size)] [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] text-center whitespace-nowrap leading-[var(--body-2-bold-line-height)]">
+                    <span className="text-green-800 py-2 rounded-lg inline-block align-middle cursor-pointer font-body-2-bold !border-primary-2 !border-[3px] !border-solid !bg-primary-1 !w-full !justify-center !items-center mt-[-1.00px] tracking-[var(--body-2-bold-letter-spacing)] text-[length:var(--body-2-bold-font-size)] [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] text-center whitespace-nowrap leading-[var(--body-2-bold-line-height)]">
                       Masukkan File Anda
                     </span>
                   </div>
