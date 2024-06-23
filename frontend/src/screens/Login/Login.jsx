@@ -1,12 +1,59 @@
+import React, { useState } from 'react';
 import { Button } from "../../components/Button";
 import { NavbarGuest } from "../../components/NavbarGuest";
 import { StateDefaultChangeWrapper } from "../../components/StateDefaultChangeWrapper";
 import { TextField } from "../../components/TextField";
-import { CheckboxFalse } from "../../icons/CheckboxFalse";
 import { EyeOff } from "../../icons/EyeOff";
 
 export const Login = () => {
-  
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const validateForm = () => {
+    if (!email || !password) {
+      setErrorMessage('Email dan password harus diisi');
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setErrorMessage('Email tidak valid');
+      return false;
+    }
+    return true;
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:3001/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Simpan token ke localStorage atau state global
+        localStorage.setItem('token', data.token);
+        // Redirect ke halaman yang diinginkan
+        window.location.href = '/home';
+      } else {
+        setErrorMessage(data.error);
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      setErrorMessage('Terjadi kesalahan. Silakan coba lagi.');
+    }
+  };
+
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-primary-1 overflow-hidden w-[1440px] h-[1024px] relative">
@@ -26,91 +73,96 @@ export const Login = () => {
               Masuk untuk mengakses akunmu
             </div>
           </div>
-          <div className="flex flex-col w-[484.01px] items-start gap-[40px] absolute top-[135px] left-0">
-            <div className="flex flex-col w-[486px] items-start gap-[24px] relative flex-[0_0_auto] mr-[-1.99px]">
-              <TextField
-                className="!w-[486px]"
-                inputTextClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-                label="E-mail"
-                // inputType={inputType}
-                labelTextClassName="!bg-primary-1"
-                labelTextClassNameOverride="!tracking-[var(--body-2-regular-letter-spacing)] !text-[length:var(--body-2-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-2-regular-font-style)] !font-[number:var(--body-2-regular-font-weight)] !font-body-2-regular !leading-[var(--body-2-regular-line-height)]"
-                leadingIcon={false}
-                state="enabled"
-                style="outlined"
-                supportingText={false}
-                textConfigurations="input-text"
-                textFieldClassName="!rounded-[10px] !bg-primary-1"
-                trailingIcon={false}
-              />
-              <div className="h-[56px] self-stretch w-full rounded-[4px_4px_0px_0px] flex flex-col items-start relative">
-                  <div className="flex flex-col items-start gap-[10px] relative self-stretch w-full flex-[0_0_auto] bg-white rounded-[15px] border border-solid border-[#79747e]">
-                    <div className="flex items-center pl-[16px] pr-0 py-[4px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
-                      <div className="flex flex-col h-[35px] items-start justify-center relative flex-1 grow">
-                        <div className="inline-flex items-center relative flex-[0_0_auto]">
-                          <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[16px] tracking-[0] leading-[22.4px] whitespace-nowrap">
-                            <input type="password" size="58" className="border-none outline-none "></input>
-                          </div>
-                        </div>
-                        <div className="inline-flex items-center px-[4px] py-0 absolute top-[-16px] left-[-4px] bg-white">
-                          <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[14px] tracking-[0] leading-[19.6px] whitespace-nowrap">
-                            Password
-                          </div>
-                        </div>
+          <form onSubmit={handleLogin} className="flex flex-col w-[486px] items-start gap-[24px] absolute top-[135px] left-0">
+            <TextField
+              className="!w-[486px]"
+              inputTextClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
+              label="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              labelTextClassName="!bg-primary-1"
+              labelTextClassNameOverride="!tracking-[var(--body-2-regular-letter-spacing)] !text-[length:var(--body-2-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-2-regular-font-style)] !font-[number:var(--body-2-regular-font-weight)] !font-body-2-regular !leading-[var(--body-2-regular-line-height)]"
+              leadingIcon={false}
+              state="enabled"
+              style="outlined"
+              supportingText={false}
+              textConfigurations="input-text"
+              textFieldClassName="!rounded-[10px] !bg-primary-1"
+              trailingIcon={false}
+            />
+            <div className="h-[56px] self-stretch w-full rounded-[4px_4px_0px_0px] flex flex-col items-start relative">
+              <div className="flex flex-col items-start gap-[10px] relative self-stretch w-full flex-[0_0_auto] bg-white rounded-[15px] border border-solid border-[#79747e]">
+                <div className="flex items-center pl-[16px] pr-0 py-[4px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
+                  <div className="flex flex-col h-[35px] items-start justify-center relative flex-1 grow">
+                    <div className="inline-flex items-center relative flex-[0_0_auto]">
+                      <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[16px] tracking-[0] leading-[22.4px] whitespace-nowrap">
+                        <input
+                          type="password"
+                          size="58"
+                          className="border-none outline-none"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
                       </div>
-                      <div className="flex flex-col w-[48px] h-[44px] items-center justify-center gap-[10px] p-[12px] relative">
-                        <EyeOff className="!relative !w-[24px] !h-[24px]" color="#1F1F1F" />
+                    </div>
+                    <div className="inline-flex items-center px-[4px] py-0 absolute top-[-16px] left-[-4px] bg-white">
+                      <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[14px] tracking-[0] leading-[19.6px] whitespace-nowrap">
+                        Password
                       </div>
                     </div>
                   </div>
-                </div>
-              <div className="flex w-[486px] items-center gap-[252px] relative flex-[0_0_auto]">
-                <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">
-                  <input type="checkbox" className="!relative !w-[24px] !h-[24px]" color="#313131" />
-                  <div className="relative w-fit font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-t text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap [font-style:var(--body-2-regular-font-style)]">
-                    Ingat Saya
+                  <div className="flex flex-col w-[48px] h-[44px] items-center justify-center gap-[10px] p-[12px] relative">
+                    <EyeOff className="!relative !w-[24px] !h-[24px]" color="#1F1F1F" />
                   </div>
                 </div>
-                <div className="relative w-[135px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-primary-2 text-[length:var(--body-2-regular-font-size)] text-right tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] [font-style:var(--body-2-regular-font-style)]">
-                  <a href="/forgotpassword" className="text-black">Lupa Password</a>
+              </div>
+            </div>
+            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+            <div className="flex w-[486px] items-center gap-[252px] relative flex-[0_0_auto]">
+              <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">
+                <input type="checkbox" className="!relative !w-[24px] !h-[24px]" color="#313131" />
+                <div className="relative w-fit font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-t text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap [font-style:var(--body-2-regular-font-style)]">
+                  Ingat Saya
                 </div>
               </div>
-            </div>
-            <div className="flex flex-col w-[486px] items-start relative flex-[0_0_auto] mr-[-1.99px]">
-              <a href="/home"><Button
-                className="!h-[49px] !flex !w-[486px]"
-                divClassName="!mt-[unset]"
-                property1="default"
-                text="Masuk"
-              /></a>
-              <StateDefaultChangeWrapper
-                changeIcon="none"
-                className="!mt-[-17px] !flex-[0_0_auto] !flex !w-[486px]"
-                hasFrame={false}
-                size="large"
-                state="default"
-                type="filled"
-              />
-              <p className="relative w-[486px] mt-[22px] font-body-2-bold font-[number:var(--body-2-bold-font-weight)] text-transparent text-[length:var(--body-2-bold-font-size)] text-center tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] [font-style:var(--body-2-bold-font-style)]">
-                <span className="text-[#303030] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]">
-                  Tidak punya akun?{" "}
-                </span>
-                <a className="text-[#235d3a] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]" href="/signup">
-                  Daftar
-                </a>
-              </p>
-            </div>
-            <div className="flex w-[486px] items-center gap-[16px] relative flex-[0_0_auto] mr-[-1.99px]">
-              <div className="relative flex-1 grow h-px bg-t opacity-25" />
-              <div className="relative w-fit mt-[-1.00px] opacity-50 font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-t text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap [font-style:var(--body-2-regular-font-style)]">
-                Atau masuk dengan
+              <div className="relative w-[135px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-primary-2 text-[length:var(--body-2-regular-font-size)] text-right tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] [font-style:var(--body-2-regular-font-style)]">
+                <a href="/forgotpassword" className="text-black">Lupa Password</a>
               </div>
-              <div className="relative flex-1 grow h-px bg-t opacity-25" />
             </div>
-            <a href="home">
-              <img className="relative w-[486px] flex-[0_0_auto] mr-[-1.99px]" alt="Frame" src="../../../static/img/frame-228.svg" />
+            <Button
+              className="!h-[49px] !flex !w-[486px]"
+              divClassName="!mt-[unset]"
+              property1="default"
+              text="Masuk"
+              type="submit"
+            />
+            <StateDefaultChangeWrapper
+              changeIcon="none"
+              className="!mt-[-17px] !flex-[0_0_auto] !flex !w-[486px]"
+              hasFrame={false}
+              size="large"
+              state="default"
+              type="filled"
+            />
+            <p className="relative w-[486px] mt-[22px] font-body-2-bold font-[number:var(--body-2-bold-font-weight)] text-transparent text-[length:var(--body-2-bold-font-size)] text-center tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] [font-style:var(--body-2-bold-font-style)]">
+              <span className="text-[#303030] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]">
+                Tidak punya akun?{" "}
+              </span>
+              <a className="text-[#235d3a] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]" href="/signup">
+                Daftar
               </a>
+            </p>
+          </form>
+          <div className="flex w-[486px] items-center gap-[16px] relative flex-[0_0_auto] mr-[-1.99px] mt-[500px]">
+            <div className="relative flex-1 grow h-px bg-t opacity-25" />
+            <div className="relative w-fit mt-[1.00px] opacity-50 font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-t text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap [font-style:var(--body-2-regular-font-style)]">
+              Atau masuk dengan
+            </div>
+            <div className="relative flex-1 grow h-px bg-t opacity-25 mt-10" />
           </div>
+          <a href="#">
+            <img className="relative w-[486px] flex-[0_0_auto] mr-[-1.99px]" alt="Frame" src="../../../static/img/frame-228.svg" />
+          </a>
         </div>
         <NavbarGuest
           className="!fixed !left-[-3px] !top-0"

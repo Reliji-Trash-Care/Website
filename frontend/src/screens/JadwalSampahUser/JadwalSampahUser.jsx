@@ -1,15 +1,85 @@
 import React from "react";
-import { Calendar } from 'rsuite';
+import { Calendar, Whisper, Popover, Badge } from 'rsuite';
 import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
-import { Button } from 'rsuite';
 import 'rsuite/styles/index.less'; // or 'rsuite/dist/rsuite.min.css'
 
-function App() {
-  return <Button appearance="primary">Hello World</Button>;
+const styles = {
+  calendar: {
+    backgroundColor: '#f5f5f5', // Contoh warna background
+    color: '#333', // Contoh warna teks
+  },
+  todoListItem: {
+    color: '#397d54', // Warna teks agenda
+  },
+  badge: {
+    backgroundColor: '#397d54', // Warna badge
+  },
+  moreLink: {
+    color: '#235d3a', // Warna link more
+  }
+};
+
+function getTodoList(date) {
+  const day = date.getDate();
+  const month = date.getMonth() + 1; // getMonth() returns 0-11, so we add 1
+  const year = date.getFullYear();
+
+  if (day === 23 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Pengangkutan Sampah' },
+    ];
+  }
+
+  if (day === 28 && month === 6 && year === 2024) {
+    return [
+      { time: '12:00 am', title: 'Pembayaran Tagihan' },
+    ];
+  }
+
+  return [];
 }
 
-export default App;
+function renderCell(date) {
+  const list = getTodoList(date);
+  const displayList = list.filter((item, index) => index < 2);
+
+  if (list.length) {
+    const moreCount = list.length - displayList.length;
+    const moreItem = (
+      <li key="more">
+        <Whisper
+          placement="top"
+          trigger="click"
+          speaker={
+            <Popover>
+              {list.map((item, index) => (
+                <p key={index}>
+                  <b>{item.time}</b> - {item.title}
+                </p>
+              ))}
+            </Popover>
+          }
+        >
+          <a style={styles.moreLink}>{moreCount} more</a>
+        </Whisper>
+      </li>
+    );
+
+    return (
+      <ul className="calendar-todo-list">
+        {displayList.map((item, index) => (
+          <li key={index} style={styles.todoListItem}>
+            <Badge style={styles.badge} /> <b>{item.time}</b> - {item.title}
+          </li>
+        ))}
+        {moreCount ? moreItem : null}
+      </ul>
+    );
+  }
+
+  return null;
+}
 
 export const JadwalSampahUser = () => {
   return (
@@ -31,8 +101,8 @@ export const JadwalSampahUser = () => {
                   src="../../../static/img/divider.svg"
                 />
               </div>
-              <div className="flex flex-col items-start gap-px relative flex-1 self-stretch w-full grow">
-                <Calendar />
+              <div className="flex flex-col items-start gap-px relative flex-1 self-stretch w-full grow" style={styles.calendar}>
+                <Calendar bordered renderCell={renderCell} />
               </div>
             </div>
           </div>

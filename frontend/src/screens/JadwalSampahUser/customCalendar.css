@@ -1,0 +1,16 @@
+.custom-calendar .rs-calendar-table-cell-content {
+  background-color: #f5f5f5; /* Contoh warna background */
+  color: #333; /* Contoh warna teks */
+}
+
+.custom-calendar .rs-calendar-table-cell-content .calendar-todo-list li {
+  color: #397d54; /* Warna teks agenda */
+}
+
+.custom-calendar .rs-calendar-table-cell-content .calendar-todo-list li .rs-badge {
+  background-color: #397d54; /* Warna badge */
+}
+
+.custom-calendar .rs-calendar-table-cell-content .calendar-todo-list li a {
+  color: #235d3a; /* Warna link more */
+}
