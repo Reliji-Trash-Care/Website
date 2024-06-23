@@ -14,7 +14,7 @@ export const Layanan = () => {
                 Jadwal Sampah
               </div>
             </div>
-            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] absolute top-[47px] left-0 bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow">
+            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] absolute top-[47px] left-0 bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow-2">
               <img className="relative w-[869px] h-[254px]" alt="Rectangle" src="../../../static/img/rectangle-99.svg" />
               <p className="relative self-stretch font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] [font-style:var(--body-1-regular-font-style)]">
                 Kami memberikan fitur jadwal pengangkutan sampah dan pengutipan iuran dalam bentuk kalender untuk
@@ -31,7 +31,7 @@ export const Layanan = () => {
                 Tagihan Iuran
               </div>
             </div>
-            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow relative flex-[0_0_auto]">
+            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow-2 relative flex-[0_0_auto]">
               <img className="relative w-[869px] h-[254px]" alt="Rectangle" src="../../../static/img/rectangle-99-1.svg" />
               <p className="relative self-stretch font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] [font-style:var(--body-1-regular-font-style)]">
                 Kami menyediakan rincian tagihan iuran sampah kepada setiap pengguna, serta menyediakan layanan
@@ -45,7 +45,7 @@ export const Layanan = () => {
                 Chat Pengelola
               </div>
             </div>
-            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow relative flex-[0_0_auto]">
+            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow-2 relative flex-[0_0_auto]">
               <img className="relative w-[869px] h-[254px]" alt="Rectangle" src="../../../static/img/rectangle-99-2.svg" />
               <p className="relative self-stretch font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] [font-style:var(--body-1-regular-font-style)]">
                 Kami menyediakan layanan chat dengan jasa pengelola angkutan sampah Reliji agar pengguna dapat meminta
@@ -59,7 +59,7 @@ export const Layanan = () => {
                 Deteksi Sampah
               </div>
             </div>
-            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow relative flex-[0_0_auto]">
+            <div className="inline-flex flex-col items-start gap-[28px] p-[32px] bg-primary-1 rounded-[0px_0px_15px_15px] shadow-drop-shadow-2 relative flex-[0_0_auto]">
               <img className="relative w-[869px] h-[254px]" alt="Rectangle" src="../../../static/img/rectangle-99-3.svg" />
               <p className="relative self-stretch font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] [font-style:var(--body-1-regular-font-style)]">
                 <span className="font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-black text-[length:var(--body-1-regular-font-size)] tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] [font-style:var(--body-1-regular-font-style)]">
