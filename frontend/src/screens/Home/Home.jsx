@@ -103,10 +103,10 @@ export const Home = () => {
                   Jambi.tribunnews.com • 22 Maret 2024
                 </p>
                 <div className="h-[60px] gap-[16px] flex items-start relative self-stretch w-full">
-                  <p className="relative flex-1 mt-[-1.00px] font-heading-8-bold font-[number:var(--heading-8-bold-font-weight)] text-tersier-2 text-[length:var(--heading-8-bold-font-size)] tracking-[var(--heading-8-bold-letter-spacing)] leading-[var(--heading-8-bold-line-height)] [font-style:var(--heading-8-bold-font-style)]">
+                  <p onClick={() => window.location.href = '/beritalatestuser'} className=" cursor-pointer relative flex-1 mt-[-1.00px] font-heading-8-bold font-[number:var(--heading-8-bold-font-weight)] text-tersier-2 text-[length:var(--heading-8-bold-font-size)] tracking-[var(--heading-8-bold-letter-spacing)] leading-[var(--heading-8-bold-line-height)] [font-style:var(--heading-8-bold-font-style)]">
                     Atasi Persoalan Sampah, Pemkot Jambi Keluarkan Instruksi Wali Kota
                   </p>
-                  <img className="relative flex-[0_0_auto]" alt="Icon wrap" src="../../../static/img/icon-wrap.svg" />
+                  <img onClick={() => window.location.href = '/beritalatestuser'} className=" cursor-pointer relative flex-[0_0_auto]" alt="Icon wrap" src="../../../static/img/icon-wrap.svg" />
                 </div>
                 <p className="relative self-stretch mb-[-55.00px] font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-tersier-2 text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] [font-style:var(--body-2-regular-font-style)]">
                   Atasi permasalahan sampah Pemerintah Kota (Pemkot) Jambi mengeluarkan instruksi Wali Kota No 5 Tahun

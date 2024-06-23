@@ -230,7 +230,7 @@ export const BeritaDetailHotUser = () => {
             <button className="all-[unset] box-border inline-flex items-start relative flex-[0_0_auto]">
               <div className="items-center justify-center gap-[8px] inline-flex relative flex-[0_0_auto]">
                 <img className="relative w-[20px] h-[20px]" alt="Arrow left" src="../../../static/img/arrow-left.svg" />
-                <div className="relative w-fit mt-[-1.00px] font-text-sm-medium font-[number:var(--text-sm-medium-font-weight)] text-variable-collection-pure-black text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] whitespace-nowrap [font-style:var(--text-sm-medium-font-style)]">
+                <div onClick={() => window.location.href = '/beritauser'} className="cursor-pointer relative w-fit mt-[-1.00px] font-text-sm-medium font-[number:var(--text-sm-medium-font-weight)] text-variable-collection-pure-black text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] whitespace-nowrap [font-style:var(--text-sm-medium-font-style)]">
                   Sebelumnya
                 </div>
               </div>
@@ -288,7 +288,7 @@ export const BeritaDetailHotUser = () => {
             </div>
             <button className="all-[unset] box-border items-start inline-flex relative flex-[0_0_auto]">
               <div className="items-center justify-center gap-[8px] inline-flex relative flex-[0_0_auto]">
-                <div className="relative w-fit mt-[-1.00px] font-text-sm-medium font-[number:var(--text-sm-medium-font-weight)] text-variable-collection-pure-black text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] whitespace-nowrap [font-style:var(--text-sm-medium-font-style)]">
+                <div onClick={() => window.location.href = '/beritalatestuser'} className=" cursor-pointer relative w-fit mt-[-1.00px] font-text-sm-medium font-[number:var(--text-sm-medium-font-weight)] text-variable-collection-pure-black text-[length:var(--text-sm-medium-font-size)] tracking-[var(--text-sm-medium-letter-spacing)] leading-[var(--text-sm-medium-line-height)] whitespace-nowrap [font-style:var(--text-sm-medium-font-style)]">
                   Selanjutnya
                 </div>
                 <img className="relative w-[20px] h-[20px]" alt="Arrow right" src="../../../static/img/arrow-right.svg" />
@@ -297,10 +297,11 @@ export const BeritaDetailHotUser = () => {
           </div>
         </div>
         <SideBarWrapper
-              beritaPropertyDefaultClassName="!fixed !flex-[0_0_auto] !bg-secondary-1"
               className="!h-[772px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
               deteksiDeteksi="../../../static/img/deteksi-3.svg"
               logoPlaceholderGroup="../../../static/img/group-7-2.png"
+              beritaDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+              beritaClassName="!flex-[0_0_auto] !bg-secondary-1"
             />
         <NavbarUserFitur
             className="!fixed !left-[324px] !top-0"

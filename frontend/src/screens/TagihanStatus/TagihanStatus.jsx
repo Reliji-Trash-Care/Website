@@ -30,7 +30,7 @@ export const TagihanStatus = () => {
               </div>
             </div>
           </div>
-          <Button className="!cursor-pointer !absolute !left-[455px] !top-[389px]" property1="default" text="Hubungi Admin" navigateTo="/chatpengelolauser" />
+          <Button className="!cursor-pointer !absolute !left-[455px] !top-[389px]" property1="default" text="Hubungi Admin" navigateTo="/whatsapp" />
           <img className="absolute w-[948px] h-px top-[358px] left-12 object-cover" alt="Line" src="../../../static/img/line-23.svg" />
           <div className="flex flex-col w-[588px] items-start absolute top-6 left-[228px] shadow-inner">
             <div className="flex items-center gap-[50px] p-6 relative self-stretch w-full flex-[0_0_auto] bg-primary-2 rounded-[10px_10px_0px_0px]">
@@ -98,6 +98,8 @@ export const TagihanStatus = () => {
           className="!rounded-[0px_15px_0px_0px] !absolute !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-4.svg"
           logoPlaceholderGroup="../../../static/img/group-7-3.png"
+          tagihanDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          tagihanClassName="!flex-[0_0_auto] !bg-additional-1"
         />
         <NavbarUserFitur
           className="!absolute !left-[324px] !top-0"
@@ -132,8 +134,8 @@ export const TagihanStatus = () => {
           className="!h-[772px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-4.svg"
           logoPlaceholderGroup="../../../static/img/group-7-3.png"
-          tagihanDivClassName="!text-primary-2 !tracking-[0] !text-base ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
-          tagihanPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          tagihanDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          tagihanClassName="!flex-[0_0_auto] !bg-additional-1"
         />
         <NavbarUserFitur
           className="!fixed !left-[324px] !top-0"
