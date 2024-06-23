@@ -298,7 +298,7 @@ export const BeritaDetailHotUser = () => {
         </div>
         <SideBarWrapper
               beritaPropertyDefaultClassName="!fixed !flex-[0_0_auto] !bg-secondary-1"
-              className="!h-[4674px] !absolute !left-0 !top-0"
+              className="!h-[772px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
               deteksiDeteksi="../../../static/img/deteksi-3.svg"
               logoPlaceholderGroup="../../../static/img/group-7-2.png"
             />

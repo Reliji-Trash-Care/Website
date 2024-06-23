@@ -14,7 +14,7 @@ export const TagihanStatus = () => {
           <p className="absolute top-[317px] left-[342px] font-body-3-regular font-[number:var(--body-3-regular-font-weight)] text-tersier-2 text-[length:var(--body-3-regular-font-size)] tracking-[var(--body-3-regular-letter-spacing)] leading-[var(--body-3-regular-line-height)] whitespace-nowrap [font-style:var(--body-3-regular-font-style)]">
             Silakan hubungi admin untuk melakukan transaksi secara langsung
           </p>
-          <div className="inline-flex items-start gap-[227px] p-6 absolute top-[229px] left-[228px] bg-additional-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow">
+          <div className="inline-flex items-start gap-[227px] p-6 absolute top-[227px] left-[228px] bg-additional-1 rounded-[0px_0px_10px_10px] shadow-inner">
             <div className="flex flex-col w-[156.5px] items-start justify-center gap-3 relative">
               <div className="inline-flex items-end gap-3 relative flex-[0_0_auto]">
                 <div className="relative w-fit mt-[-1.00px] font-body-3-regular font-[number:var(--body-3-regular-font-weight)] text-variable-collection-pure-black text-[length:var(--body-3-regular-font-size)] tracking-[var(--body-3-regular-letter-spacing)] leading-[var(--body-3-regular-line-height)] whitespace-nowrap [font-style:var(--body-3-regular-font-style)]">
@@ -32,7 +32,7 @@ export const TagihanStatus = () => {
           </div>
           <Button className="!cursor-pointer !absolute !left-[455px] !top-[389px]" property1="default" text="Hubungi Admin" navigateTo="/chatpengelolauser" />
           <img className="absolute w-[948px] h-px top-[358px] left-12 object-cover" alt="Line" src="../../../static/img/line-23.svg" />
-          <div className="flex flex-col w-[588px] items-start absolute top-6 left-[228px] shadow-drop-shadow">
+          <div className="flex flex-col w-[588px] items-start absolute top-6 left-[228px] shadow-inner">
             <div className="flex items-center gap-[50px] p-6 relative self-stretch w-full flex-[0_0_auto] bg-primary-2 rounded-[10px_10px_0px_0px]">
               <div className="flex flex-col items-start justify-center gap-3 relative flex-1 grow">
                 <div className="inline-flex items-center gap-3 relative flex-[0_0_auto]">

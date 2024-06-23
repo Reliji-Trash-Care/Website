@@ -11,7 +11,7 @@ export const TagihanSelesai = () => {
           <div className="absolute w-[1674px] h-[1674px] top-[118px] left-0 bg-[#397d54b2] rounded-[837px] blur-[550px] opacity-[0.36]" />
           <div className="absolute w-[996px] h-[1200px] top-0 left-6 bg-primary-1 rounded-[15px] shadow-drop-shadow-2" />
           <div className="absolute w-[588px] h-[270px] top-6 left-[228px]">
-            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[205px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow">
+            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[203px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow-2">
               <div className="flex flex-col w-[156.5px] items-start justify-center gap-3 relative">
                 <div className="inline-flex items-end gap-3 relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] font-body-3-regular font-[number:var(--body-3-regular-font-weight)] text-tersier-2 text-[length:var(--body-3-regular-font-size)] tracking-[var(--body-3-regular-letter-spacing)] leading-[var(--body-3-regular-line-height)] whitespace-nowrap [font-style:var(--body-3-regular-font-style)]">
@@ -27,7 +27,7 @@ export const TagihanSelesai = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow">
+            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow-2">
               <div className="flex items-center gap-[50px] p-6 relative self-stretch w-full flex-[0_0_auto] bg-additional-1 rounded-[10px_10px_0px_0px]">
                 <div className="flex flex-col items-start justify-center gap-3 relative flex-1 grow">
                   <div className="inline-flex items-center gap-3 relative flex-[0_0_auto]">
@@ -85,7 +85,7 @@ export const TagihanSelesai = () => {
             </div>
           </div>
           <div className="absolute w-[588px] h-[270px] top-[318px] left-[228px]">
-            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[205px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow">
+            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[202px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow-2">
               <div className="flex flex-col w-[156.5px] items-start justify-center gap-3 relative">
                 <div className="inline-flex items-end gap-3 relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] font-body-3-regular font-[number:var(--body-3-regular-font-weight)] text-tersier-2 text-[length:var(--body-3-regular-font-size)] tracking-[var(--body-3-regular-letter-spacing)] leading-[var(--body-3-regular-line-height)] whitespace-nowrap [font-style:var(--body-3-regular-font-style)]">
@@ -101,7 +101,7 @@ export const TagihanSelesai = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow">
+            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow-2">
               <div className="flex items-center gap-[50px] p-6 relative self-stretch w-full flex-[0_0_auto] bg-additional-1 rounded-[10px_10px_0px_0px]">
                 <div className="flex flex-col items-start justify-center gap-3 relative flex-1 grow">
                   <div className="inline-flex items-center gap-3 relative flex-[0_0_auto]">
@@ -159,7 +159,7 @@ export const TagihanSelesai = () => {
             </div>
           </div>
           <div className="absolute w-[588px] h-[270px] top-[612px] left-[228px]">
-            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[205px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow">
+            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[202px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow-2">
               <div className="flex flex-col w-[156.5px] items-start justify-center gap-3 relative">
                 <div className="inline-flex items-end gap-3 relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] font-body-3-regular font-[number:var(--body-3-regular-font-weight)] text-tersier-2 text-[length:var(--body-3-regular-font-size)] tracking-[var(--body-3-regular-letter-spacing)] leading-[var(--body-3-regular-line-height)] whitespace-nowrap [font-style:var(--body-3-regular-font-style)]">
@@ -175,7 +175,7 @@ export const TagihanSelesai = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow">
+            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow-2">
               <div className="flex items-center gap-[50px] p-6 relative self-stretch w-full flex-[0_0_auto] bg-additional-1 rounded-[10px_10px_0px_0px]">
                 <div className="flex flex-col items-start justify-center gap-3 relative flex-1 grow">
                   <div className="inline-flex items-center gap-3 relative flex-[0_0_auto] mr-[-3.00px]">
@@ -233,7 +233,7 @@ export const TagihanSelesai = () => {
             </div>
           </div>
           <div className="absolute w-[588px] h-[270px] top-[906px] left-[228px]">
-            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[205px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow">
+            <div className="inline-flex items-start gap-[227px] p-6 absolute top-[202px] left-0 bg-primary-1 rounded-[0px_0px_10px_10px] shadow-drop-shadow-2">
               <div className="flex flex-col w-[156.5px] items-start justify-center gap-3 relative">
                 <div className="inline-flex items-end gap-3 relative flex-[0_0_auto]">
                   <div className="relative w-fit mt-[-1.00px] font-body-3-regular font-[number:var(--body-3-regular-font-weight)] text-tersier-2 text-[length:var(--body-3-regular-font-size)] tracking-[var(--body-3-regular-letter-spacing)] leading-[var(--body-3-regular-line-height)] whitespace-nowrap [font-style:var(--body-3-regular-font-style)]">
@@ -249,7 +249,7 @@ export const TagihanSelesai = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow">
+            <div className="flex flex-col w-[588px] items-start absolute top-0 left-0 shadow-drop-shadow-2">
               <div className="flex items-center gap-[50px] p-6 relative self-stretch w-full flex-[0_0_auto] bg-additional-1 rounded-[10px_10px_0px_0px]">
                 <div className="flex flex-col items-start justify-center gap-3 relative flex-1 grow">
                   <div className="inline-flex items-center gap-3 relative flex-[0_0_auto]">

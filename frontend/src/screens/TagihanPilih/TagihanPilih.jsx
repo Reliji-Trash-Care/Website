@@ -19,7 +19,7 @@ export const TagihanPilih = () => {
             {" "}
             Bayar sebelum Mei 2024 dengan metode pembayaran yang dipilih
           </p>
-          <div className="flex flex-col w-[462px] items-start absolute top-[24px] left-[48px] shadow-drop-shadow">
+          <div className="flex flex-col w-[462px] items-start absolute top-[24px] left-[48px] shadow-inner">
             <div className="flex items-center gap-[50px] p-[24px] relative self-stretch w-full flex-[0_0_auto] bg-primary-2 rounded-[10px_10px_0px_0px]">
               <div className="flex flex-col items-start justify-center gap-[12px] relative flex-1 grow">
                 <div className="inline-flex items-center gap-[12px] relative flex-[0_0_auto] mr-[-42.00px]">
@@ -75,7 +75,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-[462px] items-start gap-[24px] p-[24px] absolute top-[194px] left-[534px] bg-primary-1 rounded-[10px] shadow-drop-shadow">
+          <div className="flex flex-col w-[462px] items-start gap-[24px] p-[24px] absolute top-[194px] left-[534px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
             <div className="flex flex-col w-[415px] items-start gap-[15px] relative flex-[0_0_auto] mr-[-1.00px]">
               <div className="relative w-fit mt-[-1.00px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
                 Dompet Elektronik
@@ -111,7 +111,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-[462px] items-start justify-center gap-[24px] p-[24px] absolute top-[436px] left-[534px] bg-primary-1 rounded-[10px] shadow-drop-shadow">
+          <div className="flex flex-col w-[462px] items-start justify-center gap-[24px] p-[24px] absolute top-[436px] left-[534px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
             <div className="flex flex-col w-[415px] items-start gap-[15px] relative flex-[0_0_auto] mr-[-1.00px]">
               <div className="relative w-fit mt-[-1.00px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
                 Transfer Virtual Account
@@ -161,7 +161,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col w-[462px] items-start justify-center gap-[24px] p-[24px] absolute top-[24px] left-[535px] bg-primary-1 rounded-[10px] shadow-drop-shadow">
+          <div className="flex flex-col w-[462px] items-start justify-center gap-[24px] p-[24px] absolute top-[24px] left-[535px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
             <div className="flex flex-col w-[415px] items-start gap-[15px] relative flex-[0_0_auto] mr-[-1.00px]">
               <div className="relative w-fit mt-[-1.00px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
                 Pembayaran Langsung

@@ -8,14 +8,10 @@ export const BeritaLatestUser = () => {
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-primary-1 w-[1440px] h-[2367px] relative">
-        <NavbarUserFitur
-          className="!absolute !left-[324px] !top-0"
-          profilArrowDown="../../../static/img/arrow-down-2-3.svg"
-          profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-3.png"
-        />
+        
         <SideBarWrapper
           beritaPropertyDefaultClassName="!flex-[0_0_auto] !bg-secondary-1"
-          className="!h-[2367px] !absolute !left-0 !top-0"
+          className="!h-[772px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
         />
@@ -28,7 +24,7 @@ export const BeritaLatestUser = () => {
             text1="Jambi.tribunnews.com"
             text2="M. Yon Rinaldi"
           />
-          <div className="flex flex-col w-[792px] items-center justify-center gap-[42px] absolute top-[618px] left-0">
+          <div className="flex flex-col w-[792px] items-center justify-center gap-[42px] absolute top-[750px] left-0">
             <p className="relative self-stretch mt-[-1.00px] font-heading-7-regular font-[number:var(--heading-7-regular-font-weight)] text-[#0c1d0a] text-[length:var(--heading-7-regular-font-size)] text-justify tracking-[var(--heading-7-regular-letter-spacing)] leading-[var(--heading-7-regular-line-height)] [font-style:var(--heading-7-regular-font-style)]">
               Atasi permasalahan sampah Pemerintah Kota (Pemkot) Jambi mengeluarkan instruksi Wali Kota No 5 Tahun 2024.
               Instruksi tersebut mengenai pembentukan Bank Sampah. Dimana setiap instansi hingga badan usaha harus
@@ -83,7 +79,7 @@ export const BeritaLatestUser = () => {
             </p>
           </div>
         </div>
-        <div className="flex w-[997px] h-[62px] items-center justify-between pt-5 pb-0 px-0 absolute top-[2220px] left-[324px] border-t-[0.5px] [border-top-style:solid] border-variable-collection-pure-black">
+        <div className="pb-16 flex w-[997px] h-[62px] items-center justify-between pt-16 px-0 absolute top-[2380px] left-[324px] border-t-[0.5px] [border-top-style:solid] border-variable-collection-pure-black">
           <button className="all-[unset] box-border inline-flex items-start relative flex-[0_0_auto]">
             <div className="inline-flex items-center justify-center gap-2 relative flex-[0_0_auto]">
               <img className="relative w-5 h-5" alt="Arrow left" src="../../../static/img/arrow-left.svg" />
@@ -152,6 +148,13 @@ export const BeritaLatestUser = () => {
             </div>
           </button>
         </div>
+
+        <NavbarUserFitur
+          className="!fixed !left-[324px] !top-0"
+          profilArrowDown="../../../static/img/arrow-down-2-3.svg"
+          profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-3.png"
+        />
+        
       </div>
     </div>
   );

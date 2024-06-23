@@ -16,7 +16,7 @@ export const TagihanBelum = () => {
             {" "}
             Bayar sebelum Mei 2024 dengan metode pembayaran yang dipilih
           </p>
-          <div className="flex flex-col w-[462px] items-start absolute top-[24px] left-[48px] shadow-drop-shadow">
+          <div className="flex flex-col w-[462px] items-start absolute top-[24px] left-[48px] shadow-inner">
             <div className="flex items-center gap-[50px] p-[24px] relative self-stretch w-full flex-[0_0_auto] bg-primary-2 rounded-[10px_10px_0px_0px]">
               <div className="flex flex-col items-start justify-center gap-[12px] relative flex-1 grow">
                 <div className="inline-flex items-center gap-[12px] relative flex-[0_0_auto] mr-[-42.00px]">
@@ -74,7 +74,7 @@ export const TagihanBelum = () => {
           </div>
           <Button className="!cursor-pointer !absolute !left-[375px] !top-[318px]" property1="default" text="Bayar Sekarang" navigateTo="/tagihanpilih"/>
           <img
-            className="absolute w-[462px] h-px top-[293px] left-[48px] object-cover"
+            className="absolute w-[482px] h-px top-[293px] left-[48px] object-cover"
             alt="Line"
             src="../../../static/img/line-23.svg"
           />
