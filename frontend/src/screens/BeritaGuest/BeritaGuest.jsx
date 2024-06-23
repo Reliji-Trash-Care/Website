@@ -350,7 +350,8 @@ export const BeritaGuest = () => {
         <NavbarGuest
           className="!fixed !left-0 !w-[1434px] !top-0"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
-          menuItemDivClassName="!underline !text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          beritaguestClassName=" !underline !text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          beritaguestdivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
         />
       </div>
     </div>

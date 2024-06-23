@@ -12,9 +12,16 @@ export const MenuItem = ({ property1, className, divClassName, text = "Menu item
 
   return (
     <div
-      className={`inline-flex items-center gap-[10px] px-[16px] py-[10px] justify-center relative ${className}`}
+      className={`inline-flex items-center gap-[10px] px-[16px] py-[10px] justify-center  rounded-[10px]  relative ${
+        state.property1 === "variant-2" ? "bg-secondary-1" : "bg-primary-1"
+      } ${className}`}
+      onMouseEnter={() => {
+        dispatch("mouse-enter");
+      }}
+      onMouseLeave={() => {
+        dispatch("mouse_leave");
+      }}
       onClick={() => {
-        dispatch("click");
         navigate(navigateTo);
       }}
     >
@@ -37,10 +44,16 @@ export const MenuItem = ({ property1, className, divClassName, text = "Menu item
 
 function reducer(state, action) {
   switch (action) {
-    case "click":
+    case "mouse-enter":
       return {
         ...state,
         property1: "variant-2",
+      };
+
+    case "mouse_leave":
+      return {
+        ...state,
+        property1: "default",
       };
   }
 

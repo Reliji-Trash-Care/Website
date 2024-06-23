@@ -76,8 +76,8 @@ export const Layanan = () => {
         <NavbarGuest
           className="!fixed !left-0 !top-0"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
-          menuItemDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-normal ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
-          menuItemDivClassNameOverride="!underline !text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          layananClassName="!underline !text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-normal ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          layanandivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
         />
       </div>
     </div>

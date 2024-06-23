@@ -6,7 +6,15 @@ import { LogoPlaceholder } from "../LogoPlaceholder";
 import { Masuk } from "../Masuk";
 import { MenuItem } from "../MenuItem";
 
-export const NavbarGuest = ({ className, logoPlaceholderGroup = "", menuItemDivClassName = "!text-primary-2" }) => {
+export const NavbarGuest = ({ 
+  className, 
+  logoPlaceholderGroup = "", 
+  landingpageClassName , landingpagedivClassName = "!text-primary-2" , 
+  tentangkamiClassName, tentangkamidivClassName = "text-primary-2" ,
+  layananClassName, layanandivClassName = "text-primary-2" ,
+  beritaguestClassName, beritaguestdivClassName = "text-primary-2" ,
+
+}) => {
   return (
     <div
       className={`flex w-[1440px] items-start justify-between px-[120px] py-[10px] relative bg-white rounded-[0px_0px_15px_15px] shadow-[0px_2px_10px_#00000040] backdrop-blur-[25px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(25px)_brightness(100%)] ${className}`}
@@ -21,32 +29,32 @@ export const NavbarGuest = ({ className, logoPlaceholderGroup = "", menuItemDivC
         <div className="inline-flex items-center gap-[5px] relative flex-[0_0_auto]">
           <Link to="/" className="!flex-[0_0_auto]">
             <MenuItem
-              className="!flex-[0_0_auto]"
-              divClassName="!text-primary-2"
+              className={landingpageClassName}
+              divClassName={landingpagedivClassName}
               property1="default"
               text="Beranda"
             />
           </Link>
           <Link to="/tentangkami" className="!flex-[0_0_auto]">
             <MenuItem
-              className="!flex-[0_0_auto]"
-              divClassName="!text-primary-2"
+              className={tentangkamiClassName}
+              divClassName={tentangkamidivClassName}
               property1="default"
               text="Tentang Kami"
             />
           </Link>
           <Link to="/layanan" className="!flex-[0_0_auto]">
             <MenuItem
-              className="!flex-[0_0_auto]"
-              divClassName="!text-primary-2"
+              className={layananClassName}
+              divClassName={layanandivClassName}
               property1="default"
               text="Layanan"
             />
           </Link>
           <Link to="/beritaguest" className="!flex-[0_0_auto]">
             <MenuItem
-              className="!flex-[0_0_auto]"
-              divClassName="!text-primary-2"
+              className={beritaguestClassName}
+              divClassName={beritaguestdivClassName}
               property1="default"
               text="Berita"
             />
