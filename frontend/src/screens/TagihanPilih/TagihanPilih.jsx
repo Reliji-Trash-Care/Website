@@ -216,7 +216,7 @@ export const TagihanPilih = () => {
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
           tagihanDivClassName="!text-primary-2 !tracking-[var(--body-1-bold-letter-spacing)] !text-[length:var(--body-1-bold-font-size)] ![font-style:var(--body-1-bold-font-style)] !font-[number:var(--body-1-bold-font-weight)] !font-body-1-bold !leading-[var(--body-1-bold-line-height)]"
-          tagihanPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          tagihanClassName="!flex-[0_0_auto] !bg-secondary-1"
         />
         <NavbarUserFitur
           className="!fixed !left-[324px] !top-0"

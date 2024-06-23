@@ -118,7 +118,7 @@ export const TagihanBelum = () => {
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
           tagihanDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
-          tagihanPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          tagihanClassName="!flex-[0_0_auto] !bg-additional-1"
         />
         <NavbarUserFitur
           className="!fixed !left-[324px] !top-0"

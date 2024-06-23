@@ -14,7 +14,19 @@ export const SideBarWrapper = ({
   className,
   logoPlaceholderGroup = "../../../static/img/group-7-1.png",
   sideBarDivClassName,
-  sideBarPropertyDefaultClassName,
+  sideBarClassName,
+  beritaDivClassName,
+  beritaClassName,
+  jadwalDivClassName,
+  jadwalClassName,
+  tagihanDivClassName,
+  tagihanClassName,
+  chatDivClassName,
+  chatClassName,
+  deteksiDivClassName,
+  deteksiClassName,
+  setelanDivClassName,
+  setelanClassName,
   history, // tambahkan history dari react-router
 }) => {
   
@@ -29,42 +41,44 @@ export const SideBarWrapper = ({
         groupClassName="!h-[25.47px] !w-[25.54px]"
       />
       <SideBar
-        className={sideBarPropertyDefaultClassName}
+        className={sideBarClassName}
         divClassName={sideBarDivClassName}
         home="../../../static/img/home-2.svg"
         property1="default"
       />
       <Berita
-        className="!flex-[0_0_auto]"
-        divClassName="!text-primary-2"
+        className={beritaClassName}
+        divClassName={beritaDivClassName}
         paper="../../../static/img/paper-2.svg"
         property1="default"
       />
       <Jadwal
         calendar="../../../static/img/calendar-4.svg"
-        className="!flex-[0_0_auto]"
-        divClassName="!text-primary-2"
+        className={jadwalClassName}
+        divClassName={jadwalDivClassName}
         property1="default"
       />
       <Tagihan
-        className="!flex-[0_0_auto]"
-        divClassName="!text-primary-2"
+        className={tagihanClassName}
+        divClassName={tagihanDivClassName}
         property1="default"
         wallet="../../../static/img/wallet-2.svg"
       />
       <Chat
         chat="../../../static/img/chat-2.svg"
-        className="!flex-[0_0_auto]"
-        divClassName="!text-primary-2"
+        className={chatClassName}
+        divClassName={chatDivClassName}
         property1="default"
       />
       <Deteksi
-        className="!flex-[0_0_auto]"
+        className={deteksiClassName}
+        divClassName={deteksiDivClassName}
         deteksi="../../../static/img/deteksi-2.svg"
         property1="default"
       />
       <Setelan
-        className="!flex-[0_0_auto]"
+        className={setelanClassName}
+        divClassName={setelanDivClassName}
         property1="default"
         setting="../../../static/img/setting-2.svg"
       />

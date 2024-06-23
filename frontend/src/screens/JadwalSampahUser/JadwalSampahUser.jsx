@@ -54,7 +54,7 @@ export const JadwalSampahUser = () => {
           className="!h-[772px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
           jadwalDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
-          jadwalPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          jadwalClassName="!flex-[0_0_auto] !bg-secondary-1"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
         />
         <NavbarUserFitur

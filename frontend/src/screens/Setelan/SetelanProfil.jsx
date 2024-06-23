@@ -110,8 +110,8 @@ export const SetelanProfil = () => {
           className="!h-[772px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
-          setelanDivClassName="!tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
-          setelanPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          setelanDivClassName=" !text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          setelanClassName="!flex-[0_0_auto] !bg-secondary-1"
         />
         <NavbarUserFitur
           className="!fixed !left-[324px] !top-0"

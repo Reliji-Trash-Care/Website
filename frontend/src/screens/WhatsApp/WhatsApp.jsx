@@ -40,7 +40,7 @@ const WhatsApp = () => {
       
       <SideBarWrapper
           chatDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
-          chatPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          chatClassName="!flex-[0_0_auto] !bg-additional-1"
           className="!h-[807px] !fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"

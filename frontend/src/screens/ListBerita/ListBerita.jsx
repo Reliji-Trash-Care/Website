@@ -186,12 +186,10 @@ export const ListBerita = () => {
         />
         <SideBarWrapper
           beritaPropertyDefaultClassName="!flex-[0_0_auto] !bg-secondary-1"
-          chatText="Chat"
           className="!fixed !left-0 !top-0"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
           sideBarDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
           sideBarPropertyDefaultClassName="!flex-[0_0_auto] !bg-[unset]"
-          tagihanText="Pemasukan Iuran"
         />
       </div>
     </div>

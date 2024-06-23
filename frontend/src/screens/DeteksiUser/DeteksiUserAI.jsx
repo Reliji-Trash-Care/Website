@@ -261,11 +261,10 @@ export const DeteksiUserAI = () => {
           </div>
         </div> */}
         <SideBarWrapper
-          chatDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-normal ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
           className="!h-[744px] !fixed !left-0 !top-0"
-          deteksiDetekaiClassName="!tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
           deteksiDeteksi="../../../static/img/deteksi-3.svg"
-          deteksiPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          deteksiDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          deteksiClassName="!flex-[0_0_auto] !bg-secondary-1"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
         />
         <NavbarUserFitur

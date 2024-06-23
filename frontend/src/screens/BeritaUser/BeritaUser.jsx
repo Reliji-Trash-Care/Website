@@ -353,7 +353,8 @@ export const BeritaUser = () => {
           profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-3.png"
         />
         <SideBarWrapper
-          beritaPropertyDefaultClassName="!flex-[0_0_auto] !bg-secondary-1"
+          beritaDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          beritaClassName="!flex-[0_0_auto] !bg-secondary-1"
           className="!h-[2397px] !fixed !left-0 !top-0"
           logoPlaceholderGroup="../../../static/img/group-7-2.png"
         />
