@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { useNavigate } from 'react-router-dom';
 
 export const ContainerBerita2 = ({
   className,
@@ -7,8 +8,18 @@ export const ContainerBerita2 = ({
   text1 = "Tanggal",
   text2 = "Penulis",
   ramadhanMomentum = "/img/ramadhan-momentum-untuk-menyadari-bahaya-sampah-1710922717-1.png",
+  navigateTo,
 }) => {
+
+  const navigate = useNavigate();
+
   return (
+    <div onClick={() => {
+      navigate(navigateTo);
+    }}
+    
+    >
+      
     <div className={`flex flex-col w-[792px] h-[562px] items-start gap-[12px] relative ${className}`}>
       <div className="flex flex-col items-start gap-[6px] relative self-stretch w-full flex-[0_0_auto]">
         <div className="relative self-stretch mt-[-1.00px] font-heading-3-semibold font-[number:var(--heading-3-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-3-semibold-font-size)] tracking-[var(--heading-3-semibold-letter-spacing)] leading-[var(--heading-3-semibold-line-height)] [font-style:var(--heading-3-semibold-font-style)]">
@@ -34,6 +45,7 @@ export const ContainerBerita2 = ({
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
@@ -42,4 +54,5 @@ ContainerBerita2.propTypes = {
   text1: PropTypes.string,
   text2: PropTypes.string,
   ramadhanMomentum: PropTypes.string,
+  navigateTo: PropTypes.string.isRequired,
 };

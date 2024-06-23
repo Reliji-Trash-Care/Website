@@ -312,16 +312,7 @@ export const TagihanSelesai = () => {
             Bayar
           </div>
         </div>
-        <SideBarWrapper
-          className="!h-[1047px] !rounded-[0px_15px_0px_0px] !absolute !left-0 !top-0"
-          deteksiDeteksi="../../../static/img/deteksi-4.svg"
-          logoPlaceholderGroup="../../../static/img/group-7-3.png"
-        />
-        <NavbarUserFitur
-          className="!absolute !left-[324px] !top-0"
-          profilArrowDown="../../../static/img/arrow-down-2-4.svg"
-          profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-4.png"
-        />
+        
         <div className="absolute w-[996px] h-[62px] top-[86px] left-[324px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
           <img className="absolute w-[337px] h-[5px] top-[57px] left-[658px]" alt="Line" src="../../../static/img/line-21.svg" />
           <MenuItem
@@ -350,8 +341,8 @@ export const TagihanSelesai = () => {
           className="!h-[1458px] !rounded-[0px_15px_0px_0px] !fixed !left-0 !top-0"
           deteksiDeteksi="../../../static/img/deteksi-4.svg"
           logoPlaceholderGroup="../../../static/img/group-7-3.png"
-          tagihanDivClassName="!text-primary-2 !tracking-[0] !text-base ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
-          tagihanPropertyDefaultClassName="!flex-[0_0_auto] !bg-additional-1"
+          tagihanDivClassName="!text-primary-2 !tracking-[0] !text-[16px] ![font-style:unset] !font-bold ![font-family:'Nunito',Helvetica] !leading-[22.4px]"
+          tagihanClassName="!flex-[0_0_auto] !bg-secondary-1"
         />
         <NavbarUserFitur
           className="!fixed !left-[324px] !top-0"
