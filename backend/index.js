@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import mysql from 'mysql';
 import bcrypt from 'bcrypt';
 import cors from 'cors';
-import jwt from 'jsonwebtoken'; // Pastikan Anda menginstal jsonwebtoken dengan `npm install jsonwebtoken`
+import jwt from 'jsonwebtoken';
 
 const app = express();
 const port = 3001;
@@ -11,7 +11,7 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
-const SECRET_KEY = "your_secret_key"; // Pastikan untuk mengganti dengan secret key yang aman
+const SECRET_KEY = "your_secret_key";
 
 // MySQL connection setup
 const db = mysql.createConnection({
@@ -47,10 +47,9 @@ app.post('/register', async (req, res) => {
 // Login route
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
-  console.log(`Login attempt: ${email}`); // Log email
-  console.log(`Password attempt: ${password}`); // Log password
+  console.log(`Received login request with email: ${email} and password: ${password}`); // Log email and password
 
-  const sql = 'SELECT * FROM User WHERE email = ?';
+  const sql = 'SELECT * FROM user WHERE email = ?';
   db.query(sql, [email], async (err, results) => {
     if (err) {
       console.error('Error in SQL query:', err);
@@ -58,23 +57,23 @@ app.post('/login', (req, res) => {
     }
 
     if (results.length === 0) {
-      console.log('No user found'); // Log jika user tidak ditemukan
+      console.log('No user found'); // Log if user not found
       return res.status(401).json({ error: 'Invalid email or password' });
     }
 
     const user = results[0];
-    console.log(`User found: ${user.email}`); // Log jika user ditemukan
+    console.log(`User found: ${user.email}`); // Log if user found
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
-    console.log(`Password valid: ${isPasswordValid}`); // Log hasil validasi password
+    console.log(`Password valid: ${isPasswordValid}`); // Log password validation result
 
     if (!isPasswordValid) {
-      console.log('Invalid password'); // Log jika password tidak valid
+      console.log('Invalid password'); // Log if password is invalid
       return res.status(401).json({ error: 'Invalid email or password' });
     }
 
     const token = jwt.sign({ id: user.id, email: user.email }, SECRET_KEY, { expiresIn: '1h' });
-    res.json({ message: 'Login successful', token, user: { email: user.email, nama: user.nama } });
+    res.json({ message: 'Login successful', token });
   });
 });
 

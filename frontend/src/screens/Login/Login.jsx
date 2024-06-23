@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Button } from "../../components/Button";
 import { NavbarGuest } from "../../components/NavbarGuest";
 import { StateDefaultChangeWrapper } from "../../components/StateDefaultChangeWrapper";
-import { TextField } from "../../components/TextField";
-import { EyeOff } from "../../icons/EyeOff";
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -11,6 +9,7 @@ export const Login = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const validateForm = () => {
+    console.log(`Validating form with email: ${email} and password: ${password}`);
     if (!email || !password) {
       setErrorMessage('Email dan password harus diisi');
       return false;
@@ -24,6 +23,7 @@ export const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    console.log(`Submitting form with email: ${email} and password: ${password}`);
 
     if (!validateForm()) {
       return;
@@ -74,49 +74,22 @@ export const Login = () => {
             </div>
           </div>
           <form onSubmit={handleLogin} className="flex flex-col w-[486px] items-start gap-[24px] absolute top-[135px] left-0">
-            <TextField
-              className="!w-[486px]"
-              inputTextClassName="!tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)]"
-              label="E-mail"
+            <label htmlFor="email">E-mail</label>
+            <input
+              id="email"
+              type="email"
+              className="!w-[486px] !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)] !rounded-[10px] !bg-primary-1"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              labelTextClassName="!bg-primary-1"
-              labelTextClassNameOverride="!tracking-[var(--body-2-regular-letter-spacing)] !text-[length:var(--body-2-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-2-regular-font-style)] !font-[number:var(--body-2-regular-font-weight)] !font-body-2-regular !leading-[var(--body-2-regular-line-height)]"
-              leadingIcon={false}
-              state="enabled"
-              style="outlined"
-              supportingText={false}
-              textConfigurations="input-text"
-              textFieldClassName="!rounded-[10px] !bg-primary-1"
-              trailingIcon={false}
             />
-            <div className="h-[56px] self-stretch w-full rounded-[4px_4px_0px_0px] flex flex-col items-start relative">
-              <div className="flex flex-col items-start gap-[10px] relative self-stretch w-full flex-[0_0_auto] bg-white rounded-[15px] border border-solid border-[#79747e]">
-                <div className="flex items-center pl-[16px] pr-0 py-[4px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
-                  <div className="flex flex-col h-[35px] items-start justify-center relative flex-1 grow">
-                    <div className="inline-flex items-center relative flex-[0_0_auto]">
-                      <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[16px] tracking-[0] leading-[22.4px] whitespace-nowrap">
-                        <input
-                          type="password"
-                          size="58"
-                          className="border-none outline-none"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                        />
-                      </div>
-                    </div>
-                    <div className="inline-flex items-center px-[4px] py-0 absolute top-[-16px] left-[-4px] bg-white">
-                      <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[14px] tracking-[0] leading-[19.6px] whitespace-nowrap">
-                        Password
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex flex-col w-[48px] h-[44px] items-center justify-center gap-[10px] p-[12px] relative">
-                    <EyeOff className="!relative !w-[24px] !h-[24px]" color="#1F1F1F" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              className="!w-[486px] !tracking-[var(--body-1-regular-letter-spacing)] !text-[length:var(--body-1-regular-font-size)] !whitespace-nowrap ![font-style:var(--body-1-regular-font-style)] !font-[number:var(--body-1-regular-font-weight)] !font-body-1-regular !leading-[var(--body-1-regular-line-height)] !rounded-[10px] !bg-primary-1"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
             {errorMessage && <p className="text-red-500">{errorMessage}</p>}
             <div className="flex w-[486px] items-center gap-[252px] relative flex-[0_0_auto]">
               <div className="inline-flex items-center gap-[8px] relative flex-[0_0_auto]">

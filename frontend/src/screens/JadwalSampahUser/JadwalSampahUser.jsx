@@ -110,8 +110,9 @@ export const JadwalSampahUser = () => {
             <div className="flex flex-wrap w-[196px] items-start gap-[7px_18px] relative flex-[0_0_auto]">
               <div className="relative w-[24px] h-[24px] bg-primary-2 rounded-[12px]" />
               <div className="relative w-fit mt-[-1.00px] font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-tersier-2 text-[length:var(--body-1-regular-font-size)] text-center tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
-                Pengangkutan sampah
+                Angkut sampah
               </div>
+              <br></br>
               <div className="relative w-[24px] h-[24px] bg-additional-1 rounded-[12px]" />
               <div className="relative w-fit font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-tersier-2 text-[length:var(--body-1-regular-font-size)] text-center tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
                 Pembayaran iuran

@@ -20,7 +20,7 @@ export const ContainerBerita = ({ className, text = "Header", buttonText = "Butt
           </p>
         </div>
         <div className="inline-flex flex-col items-start relative flex-[0_0_auto]">
-          <a href="/beritadetailuser"><Button className="!flex-[0_0_auto]" property1="default" text={buttonText} /></a>
+          <a href="/beritadetailhot"><Button className="!flex-[0_0_auto]" property1="default" text={buttonText} /></a>
         </div>
       </div>
       <div className="flex flex-col items-start relative flex-1 self-stretch grow">
