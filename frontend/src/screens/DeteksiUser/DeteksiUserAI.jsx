@@ -248,9 +248,11 @@ export const DeteksiUserAI = () => {
             </p>
             <div className="flex w-[414px] items-start justify-end gap-[16px] relative flex-[0_0_auto] mb-[-10.00px]">
               {selectedFile && (
+                <>
                 <Button className="!flex-[0_0_auto]" property1="default" text="Hapus" onClick={handleDeleteClick} />
-              )}
               <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" onClick={handleSubmit} />
+              </>
+              )}
             </div>
 
           </div>
