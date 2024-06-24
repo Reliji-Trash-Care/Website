@@ -92,7 +92,7 @@ export const SignUp = () => {
                               <input
                                 type="text"
                                 name="nama"
-                                size="50"
+                                size="45"
                                 autoComplete="off"
                                 className="!rounded-[15px] !h-[unset] !flex-1 !grow !w-[unset] border-none outline-none bg-white"
                                 value={formData.nama}
@@ -118,7 +118,7 @@ export const SignUp = () => {
                               <input
                                 type="email"
                                 name="email"
-                                size="50"
+                                size="45"
                                 autoComplete="off"
                                 className="!rounded-[15px] !h-[unset] !flex-1 !grow !w-[unset] border-none outline-none bg-white"
                                 value={formData.email}
@@ -144,7 +144,7 @@ export const SignUp = () => {
                               <input
                                 type="text"
                                 name="nomorTelepon"
-                                size="50"
+                                size="45"
                                 autoComplete="off"
                                 className="!rounded-[15px] !h-[unset] !flex-1 !grow !w-[unset] border-none outline-none bg-white"
                                 value={formData.nomorTelepon}
@@ -170,7 +170,7 @@ export const SignUp = () => {
                               <input
                                 type="text"
                                 name="alamat"
-                                size="50"
+                                size="45"
                                 autoComplete="off"
                                 className="!rounded-[15px] !h-[unset] !flex-1 !grow !w-[unset] border-none outline-none bg-white"
                                 value={formData.alamat}
@@ -196,7 +196,7 @@ export const SignUp = () => {
                               <input
                                 type={showPassword ? "text" : "password"}
                                 name="password"
-                                size="46"
+                                size="42"
                                 autoComplete="off"
                                 className="border-none outline-none bg-white"
                                 value={formData.password}

@@ -250,7 +250,7 @@ export const DeteksiUserAI = () => {
               {selectedFile && (
                 <>
                 <Button className="!flex-[0_0_auto]" property1="default" text="Hapus" onClick={handleDeleteClick} />
-              <Button className="!flex-[0_0_auto]" property1="default" text="Selanjutnya" onClick={handleSubmit} />
+              <Button className="!flex-[0_0_auto]" property1="default" text="Deteksi" onClick={handleSubmit} />
               </>
               )}
             </div>
