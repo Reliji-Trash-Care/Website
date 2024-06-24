@@ -25,13 +25,13 @@ function getTodoList(date) {
   const month = date.getMonth() + 1; // getMonth() returns 0-11, so we add 1
   const year = date.getFullYear();
 
-  if (day === 23 && month === 6 && year === 2024) {
+  if (day === 11 && month === 6 && year === 2024) {
     return [
       { time: '08:00', title: 'Pengangkutan Sampah' },
     ];
   }
 
-  if (day === 28 && month === 6 && year === 2024) {
+  if (day === 15 && month === 6 && year === 2024) {
     return [
       { time: '12:00 am', title: 'Pembayaran Tagihan' },
     ];
