@@ -99,7 +99,7 @@ export const TagihanBelum = () => {
             navigateTo="/tagihanbelum"
           />
           <MenuItem
-            className="!cursor-pointer !px-0 !py-[10px] !absolute !left-[428px] !top-[10px]"
+            className="!cursor-pointer !px-5 !py-[10px] !absolute !left-[428px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Status Pembayaran"

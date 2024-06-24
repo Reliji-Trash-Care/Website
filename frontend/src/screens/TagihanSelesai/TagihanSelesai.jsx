@@ -316,7 +316,7 @@ export const TagihanSelesai = () => {
         <div className="absolute w-[996px] h-[62px] top-[86px] left-[324px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
           <img className="absolute w-[337px] h-[5px] top-[57px] left-[658px]" alt="Line" src="../../../static/img/line-21.svg" />
           <MenuItem
-            className=" !cursor-pointer !px-0 !py-2.5 !absolute !left-[429px] !top-2.5"
+            className=" !cursor-pointer !px-5 !py-2.5 !absolute !left-[429px] !top-2.5"
             divClassName="!text-tersier-2"
             property1="default"
             text="Status Pembayaran"

@@ -83,7 +83,8 @@ export const TagihanPilih = () => {
               <img className="relative w-[414px] h-px mb-[-0.50px] object-cover" alt="Line" src="../../../static/img/line-15-2.svg" />
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" />
+              <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
+              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
               <EwalletDana
                 DANAClassName="!h-[40px]"
                 className="!rounded-[15px] !h-[40px] !w-[56px] !relative"
@@ -95,7 +96,8 @@ export const TagihanPilih = () => {
               </div>
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" />
+            <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
+              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
               <EwalletGopay
                 GOPAYClassName="!h-[40px]"
                 className="!rounded-[15px] !h-[40px] !w-[56px] !relative"
@@ -119,7 +121,8 @@ export const TagihanPilih = () => {
               <img className="relative w-[414px] h-px mb-[-0.50px] object-cover" alt="Line" src="../../../static/img/line-15-2.svg" />
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" />
+              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
+              <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
               <BankBri
                 BRIClassName="!h-[40px]"
                 className="!h-[40px] !w-[56px] !relative"
@@ -131,7 +134,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-            <input type="radio" className="!border-tersier-2 !relative !bg-primary-1" />
+            <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
               {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
               <BankMandiri
                 MANDIRIClassName="!h-[40px]"
@@ -169,7 +172,7 @@ export const TagihanPilih = () => {
               <img className="relative w-[414px] h-px mb-[-0.50px] object-cover" alt="Line" src="../../../static/img/line-15-2.svg" />
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <input type="radio" className="" />
+              <input onClick={() => window.location.href = '/whatsapp'} type="radio" className="!size-8 !border-tersier-2 !relative" />
               <img className="relative w-[32px] h-[32px]" alt="Call" src="../../../static/img/call.png" />
               <div className="relative w-fit font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
                 Hubungi Admin
@@ -197,7 +200,7 @@ export const TagihanPilih = () => {
             navigateTo="/tagihanbelum"
           />
           <MenuItem
-            className="!cursor-pointer !px-0 !py-[10px] !absolute !left-[428px] !top-[10px]"
+            className="!cursor-pointer !px-5 !py-[10px] !absolute !left-[428px] !top-[10px]"
             divClassName="!text-tersier-2"
             property1="default"
             text="Status Pembayaran"
