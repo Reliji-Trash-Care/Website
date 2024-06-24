@@ -3,6 +3,7 @@ import { Button } from "../../components/Button";
 import { NavbarGuest } from "../../components/NavbarGuest";
 import Swal from 'sweetalert2';
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"; // Import eye icons
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -83,11 +84,11 @@ export const Login = () => {
               Masuk untuk mengakses akunmu
             </div>
           </div>
-          <form onSubmit={handleLogin} className="flex flex-col w-[486px] items-start gap-[24px] absolute top-[135px] left-0">
-            <label htmlFor="email">E-mail</label>
+          <form onSubmit={handleLogin} className="flex flex-col w-[486px] items-start gap-[24px] absolute top-[100px] left-0">
+            <label htmlFor="email"></label>
             <div className="flex flex-col items-start gap-[10px] relative self-stretch w-full flex-[0_0_auto] bg-white rounded-[15px] border border-solid border-[#79747e]">
               <div className="flex items-center pl-[16px] pr-0 py-[4px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
-                <div className="flex flex-col h-[35px] items-start justify-center relative flex-1 grow">
+                <div className=" flex flex-col h-[43px] items-start justify-center relative flex-1 grow">
                   <div className="inline-flex items-center relative flex-[0_0_auto]">
                     <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[16px] tracking-[0] leading-[22.4px] whitespace-nowrap">
                       <input
@@ -110,7 +111,7 @@ export const Login = () => {
               </div>
             </div>
 
-            <label htmlFor="password">Password</label>
+            {/* <label htmlFor="password">Password</label> */}
             <div className="flex flex-col items-start gap-[10px] relative self-stretch w-full flex-[0_0_auto] bg-white rounded-[15px] border border-solid border-[#79747e]">
               <div className="flex items-center pl-[16px] pr-0 py-[4px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
                 <div className="flex flex-col h-[35px] items-start justify-center relative flex-1 grow">
@@ -161,25 +162,25 @@ export const Login = () => {
               text="Masuk"
               type="submit"
             />
-            <p className="relative w-[486px] mt-[22px] font-body-2-bold font-[number:var(--body-2-bold-font-weight)] text-transparent text-[length:var(--body-2-bold-font-size)] text-center tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] [font-style:var(--body-2-bold-font-style)]">
+            <p className="relative w-[486px] mt-[5px] font-body-2-bold font-[number:var(--body-2-bold-font-weight)] text-transparent text-[length:var(--body-2-bold-font-size)] text-center tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] [font-style:var(--body-2-bold-font-style)]">
               <span className="text-[#303030] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]">
                 Tidak punya akun?{" "}
               </span>
-              <a className="text-[#235d3a] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]" href="/signup">
-                Daftar
-              </a>
+              <Link className="text-[#235d3a] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]" to="/signup">
+                  Daftar
+              </Link>
             </p>
           </form>
-          <div className="flex w-[486px] items-center gap-[16px] relative flex-[0_0_auto] mr-[-1.99px] mt-[500px]">
+          {/* <div className="flex w-[486px] items-center gap-[16px] relative flex-[0_0_auto] mr-[-1.99px] mt-[500px]">
             <div className="relative flex-1 grow h-px bg-t opacity-25" />
             <div className="relative w-fit mt-[60px] opacity-50 font-body-2-regular font-[number:var(--body-2-regular-font-weight)] text-t text-[length:var(--body-2-regular-font-size)] tracking-[var(--body-2-regular-letter-spacing)] leading-[var(--body-2-regular-line-height)] whitespace-nowrap [font-style:var(--body-2-regular-font-style)]">
               Atau masuk dengan
             </div>
             <div className="relative flex-1 grow h-px bg-t opacity-25 mt-10" />
-          </div>
-          <a href="#">
+          </div> */}
+          {/* <a href="#">
             <img className="relative w-[486px] flex-[0_0_auto] mr-[-1.99px]" alt="Frame" src="../../../static/img/frame-228.svg" />
-          </a>
+          </a> */}
         </div>
         <NavbarGuest
           className="!fixed !left-[-3px] !top-0"

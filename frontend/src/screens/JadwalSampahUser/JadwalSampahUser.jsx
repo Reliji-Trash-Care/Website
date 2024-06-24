@@ -12,8 +12,14 @@ const styles = {
   todoListItem: {
     color: '#397d54', // Warna teks agenda
   },
-  badge: {
-    backgroundColor: '#397d54', // Warna badge
+  // badge: {
+  //   backgroundColor: '#397d54', // Warna badge
+  // },
+  badgeGreen: {
+    backgroundColor: '#397d54', // Warna hijau
+  },
+  badgeRed: {
+    backgroundColor: '#FF0000', // Warna merah
   },
   moreLink: {
     color: '#235d3a', // Warna link more
@@ -25,15 +31,49 @@ function getTodoList(date) {
   const month = date.getMonth() + 1; // getMonth() returns 0-11, so we add 1
   const year = date.getFullYear();
 
-  if (day === 11 && month === 6 && year === 2024) {
+  if (day === 29 && month === 5 && year === 2024) {
     return [
-      { time: '08:00', title: 'Pengangkutan Sampah' },
+      { time: '08:00', title: 'Angkut Sampah' },
     ];
   }
-
+  if (day === 3 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Angkut Sampah' },
+    ];
+  }
+  if (day === 7 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Angkut Sampah' },
+    ];
+  }
+  if (day === 10 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Angkut Sampah' },
+    ];
+  }
   if (day === 15 && month === 6 && year === 2024) {
     return [
-      { time: '12:00 am', title: 'Pembayaran Tagihan' },
+      { time: '12:00', title: 'Pembayaran Tagihan' },
+    ];
+  }
+  if (day === 14 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Angkut Sampah' },
+    ];
+  }
+  if (day === 18 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Angkut Sampah' },
+    ];
+  }
+  if (day === 22 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Angkut Sampah' },
+    ];
+  }
+  if (day === 26 && month === 6 && year === 2024) {
+    return [
+      { time: '08:00', title: 'Angkut Sampah' },
     ];
   }
 
@@ -70,7 +110,7 @@ function renderCell(date) {
       <ul className="calendar-todo-list">
         {displayList.map((item, index) => (
           <li key={index} style={styles.todoListItem}>
-            <Badge style={styles.badge} /> <b>{item.time}</b> - {item.title}
+            <Badge style={item.title === 'Pembayaran Tagihan' ? styles.badgeRed : styles.badgeGreen} /> <b>{item.time}</b> - {item.title}
           </li>
         ))}
         {moreCount ? moreItem : null}
@@ -113,7 +153,7 @@ export const JadwalSampahUser = () => {
                 Angkut sampah
               </div>
               <br></br>
-              <div className="relative w-[24px] h-[24px] bg-additional-1 rounded-[12px]" />
+              <div className="relative w-[24px] h-[24px] bg-red-600 rounded-[12px]" />
               <div className="relative w-fit font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-tersier-2 text-[length:var(--body-1-regular-font-size)] text-center tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
                 Pembayaran iuran
               </div>

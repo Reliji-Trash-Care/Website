@@ -1,8 +1,15 @@
 import React from "react";
+import { useState } from "react";
+import { PopupReminder } from "../../components/PopupReminder";
 
 export const Notification = ({ className }) => {
+
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
+    <div>
     <svg
+      onClick={() => setIsOpen((prev) => !prev)}
       className={`${className}`}
       fill="none"
       height="23"
@@ -15,6 +22,18 @@ export const Notification = ({ className }) => {
         fill="#235D3A"
       />
       <circle cx="16.5" cy="4.5" fill="#FF0000" r="4.5" />
+
+
     </svg>
+
+        {
+          isOpen && 
+          (
+          <div className="absolute left-0 top-12" >
+          <PopupReminder/>
+          </div>
+          )
+        }
+    </div>
   );
 };

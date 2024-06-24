@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { Frame } from "./Frame";
-import { Modal } from "../Modal";
+
+
 
 export const Profil = ({
   property1,
@@ -65,7 +66,6 @@ export const Profil = ({
         >
           <span
             className="cursor-pointer"
-            
           >
             Sopia
           </span>

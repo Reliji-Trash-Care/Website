@@ -3,8 +3,12 @@ import React from "react";
 import { Notification } from "../../icons/Notification";
 import { MenuItem } from "../MenuItem";
 import { Profil } from "../Profil";
+import { useState } from "react";
 
 export const NavbarUserFitur = ({ className, profilArrowDown = "../../../static/img/arrow-down-2-2.svg" }) => {
+  
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div
       className={`w-[1116px] h-[62px] bg-white rounded-[0px_0px_15px_15px] shadow-[0px_2px_10px_#00000040] backdrop-blur-[25px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(25px)_brightness(100%)] ${className}`}
@@ -17,7 +21,7 @@ export const NavbarUserFitur = ({ className, profilArrowDown = "../../../static/
             property1="default"
             text="Notifikasi"
           />
-          <Notification className="!absolute !w-[22px] !h-[23px] !top-[8px] !left-0" />
+          <Notification className=" !cursor-pointer !absolute !w-[22px] !h-[23px] !top-[8px] !left-0" />
         </div>
         <Profil
           arrowDown={profilArrowDown}

@@ -24,7 +24,7 @@ import { ListBerita } from "./screens/ListBerita/ListBerita";
 import { TagihanAdmin } from "./screens/TagihanAdmin/TagihanAdmin";
 import { ChatPengelolaAdmin } from "./screens/ChatPengelolaAdmin/ChatPengelolaAdmin";
 import { DeteksiAdmin } from "./screens/DeteksiAdmin/DeteksiAdmin";
-import { TagihanPilih } from "./screens/TagihanPilih/TagihanPilih";
+// import { TagihanPilih } from "./screens/TagihanPilih/TagihanPilih";
 import { TagihanBelum } from './screens/TagihanBelum/TagihanBelum';
 import { JadwalSampahUser } from './screens/JadwalSampahUser/JadwalSampahUser';
 import { DeteksiUpload } from './screens/DeteksiUpload/DeteksiUpload'
@@ -63,7 +63,7 @@ const App = () => {
     <Route path='/setelanprofiladmin' element={<SetelanProfilAdmin/>} />
     <Route path='/jadwalsampahuser' element={<JadwalSampahUser/>} />
     <Route path='/tagihanbelum' element={<TagihanBelum/>} />
-    <Route path='/tagihanpilih' element={<TagihanPilih/>} />
+    {/* <Route path='/tagihanpilih' element={<TagihanPilih/>} /> */}
     <Route path='/tagihanstatus' element={<TagihanStatus/>} />
     <Route path='/tagihanselesai' element={<TagihanSelesai/>} />
     <Route path='/chatpengelolauser' element={<ChatPengelolaUser/>} />

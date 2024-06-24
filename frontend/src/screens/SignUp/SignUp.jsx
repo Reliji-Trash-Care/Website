@@ -189,7 +189,7 @@ export const SignUp = () => {
                   </div>
                   <div className="h-[56px] self-stretch w-full rounded-[4px_4px_0px_0px] flex flex-col items-start relative">
                     <div className="flex flex-col items-start gap-[10px] relative self-stretch w-full flex-[0_0_auto] bg-white rounded-[15px] border border-solid border-[#79747e]">
-                      <div className="flex items-center pl-[16px] pr-0 py-[4px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
+                      <div className="flex items-center pl-[16px] pr-0 py-[1px] relative self-stretch w-full flex-[0_0_auto] rounded-[4px_4px_0px_0px]">
                         <div className="flex flex-col h-[35px] items-start justify-center relative flex-1 grow">
                           <div className="inline-flex items-center relative flex-[0_0_auto]">
                             <div className="relative w-fit mt-[-1.00px] [font-family:'Nunito',Helvetica] font-normal text-tersier-2 text-[16px] tracking-[0] leading-[22.4px] whitespace-nowrap">
@@ -235,8 +235,8 @@ export const SignUp = () => {
                     property1="default"
                     text="Daftar"
                   />
-                  <div className="flex flex-col w-[486px] items-start gap-[16px] absolute top-[54px] left-0">
-                    <p className="relative w-[486px] mt-[-1.00px] font-body-2-bold font-[number:var(--body-2-bold-font-weight)] text-transparent text-[length:var(--body-2-bold-font-size)] text-center tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] [font-style:var(--body-2-bold-font-style)]">
+                  <div className="flex flex-col w-[486px] items-start gap-[20px] absolute top-[54px] left-0">
+                    <p className="relative w-[486px] mt-[20px] font-body-2-bold font-[number:var(--body-2-bold-font-weight)] text-transparent text-[length:var(--body-2-bold-font-size)] text-center tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] [font-style:var(--body-2-bold-font-style)]">
                       <span className="text-[#1e1e1e] font-body-2-bold [font-style:var(--body-2-bold-font-style)] font-[number:var(--body-2-bold-font-weight)] tracking-[var(--body-2-bold-letter-spacing)] leading-[var(--body-2-bold-line-height)] text-[length:var(--body-2-bold-font-size)]">
                         Sudah punya akun?{" "}
                       </span>
@@ -246,14 +246,6 @@ export const SignUp = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-[16px] relative self-stretch w-full flex-[0_0_auto]">
-                  <div className="relative flex-1 grow h-px bg-tersier-2 opacity-25" />
-                  <div className="relative w-fit mt-[-1.00px] opacity-50 font-body-2-semibold font-[number:var(--body-2-semibold-font-weight)] text-tersier-2 text-[length:var(--body-2-semibold-font-size)] tracking-[var(--body-2-semibold-letter-spacing)] leading-[var(--body-2-semibold-line-height)] whitespace-nowrap [font-style:var(--body-2-semibold-font-style)]">
-                    Atau daftar dengan
-                  </div>
-                  <div className="relative flex-1 grow h-px bg-tersier-2 opacity-25" />
-                </div>
-                <img className="relative self-stretch w-full flex-[0_0_auto]" alt="Frame" src="../../../static/img/frame-228.svg" />
               </div>
             </div>
           </div>

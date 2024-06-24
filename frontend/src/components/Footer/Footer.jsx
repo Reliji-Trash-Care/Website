@@ -27,7 +27,7 @@ export const Footer = ({ className }) => {
                   <div className="items-start inline-flex gap-[8px] relative flex-[0_0_auto]">
                     <img className="relative w-[24px] h-[24px]" alt="Phone" src="../../../static/img/phone.png" />
                     <div className="relative w-fit mt-[-1.00px] font-body-1-regular font-[number:var(--body-1-regular-font-weight)] text-primary-1 text-[length:var(--body-1-regular-font-size)] tracking-[var(--body-1-regular-letter-spacing)] leading-[var(--body-1-regular-line-height)] whitespace-nowrap [font-style:var(--body-1-regular-font-style)]">
-                      081234567890
+                      089661258050
                     </div>
                   </div>
                 </div>

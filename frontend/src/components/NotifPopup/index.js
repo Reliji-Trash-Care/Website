@@ -1,0 +1,1 @@
+export { NotifPopup } from "./NotifPopup";
