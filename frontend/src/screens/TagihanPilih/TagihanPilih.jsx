@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import qrCode from './gopay.png'
+import Modal from "react-modal";
 import { BankBri } from "../../components/BankBri";
 import { BankMandiri } from "../../components/BankMandiri";
 import { EwalletDana } from "../../components/EwalletDana";
@@ -8,7 +10,12 @@ import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SelectButton } from "../../components/SelectButton";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
 
+Modal.setAppElement("#root");
+
 export const TagihanPilih = () => {
+  const [visible, setVisible] = useState(false);
+  const [visible2, setVisible2] = useState(false);
+
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-primary-1 overflow-hidden w-[1440px] h-[936px] relative">
@@ -75,6 +82,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
           </div>
+
           <div className="flex flex-col w-[462px] items-start gap-[24px] p-[24px] absolute top-[194px] left-[534px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
             <div className="flex flex-col w-[415px] items-start gap-[15px] relative flex-[0_0_auto] mr-[-1.00px]">
               <div className="relative w-fit mt-[-1.00px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
@@ -83,8 +91,7 @@ export const TagihanPilih = () => {
               <img className="relative w-[414px] h-px mb-[-0.50px] object-cover" alt="Line" src="../../../static/img/line-15-2.svg" />
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
-              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
+              <input onClick={() => setVisible(true)} type="radio" className="!size-8 !border-tersier-2 !relative" />
               <EwalletDana
                 DANAClassName="!h-[40px]"
                 className="!rounded-[15px] !h-[40px] !w-[56px] !relative"
@@ -96,8 +103,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-            <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
-              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
+              <input onClick={() => setVisible(true)} type="radio" className="!size-8 !border-tersier-2 !relative" />
               <EwalletGopay
                 GOPAYClassName="!h-[40px]"
                 className="!rounded-[15px] !h-[40px] !w-[56px] !relative"
@@ -113,6 +119,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
           </div>
+
           <div className="flex flex-col w-[462px] items-start justify-center gap-[24px] p-[24px] absolute top-[436px] left-[534px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
             <div className="flex flex-col w-[415px] items-start gap-[15px] relative flex-[0_0_auto] mr-[-1.00px]">
               <div className="relative w-fit mt-[-1.00px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
@@ -121,7 +128,6 @@ export const TagihanPilih = () => {
               <img className="relative w-[414px] h-px mb-[-0.50px] object-cover" alt="Line" src="../../../static/img/line-15-2.svg" />
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
               <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
               <BankBri
                 BRIClassName="!h-[40px]"
@@ -134,8 +140,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-            <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
-              {/* <SelectButton className="!border-tersier-2 !relative !bg-primary-1" property1="default" /> */}
+              <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
               <BankMandiri
                 MANDIRIClassName="!h-[40px]"
                 className="!h-[40px] !w-[56px] !relative"
@@ -164,6 +169,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
           </div>
+
           <div className="flex flex-col w-[462px] items-start justify-center gap-[24px] p-[24px] absolute top-[24px] left-[535px] bg-primary-1 rounded-[10px] shadow-drop-shadow-2">
             <div className="flex flex-col w-[415px] items-start gap-[15px] relative flex-[0_0_auto] mr-[-1.00px]">
               <div className="relative w-fit mt-[-1.00px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-tersier-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
@@ -180,11 +186,13 @@ export const TagihanPilih = () => {
             </div>
           </div>
         </div>
+        
         <div className="inline-flex items-start gap-[9.46px] px-[30.28px] py-[15.14px] absolute top-[-1624px] left-[321px] bg-primary-2 rounded-[10px] shadow-[0px_3.78px_4.73px_#00000066]">
           <div className="relative w-fit mt-[-0.95px] [font-family:'Nunito',Helvetica] font-bold text-[#f3ffd1] text-[15.1px] text-center tracking-[0.08px] leading-[18.2px] whitespace-nowrap">
             Bayar
           </div>
         </div>
+        
         <NavbarUserFitur
           className="!absolute !left-[324px] !top-0"
           profilArrowDown="../../../static/img/arrow-down-2-4.svg"
@@ -226,6 +234,48 @@ export const TagihanPilih = () => {
           profilArrowDown="../../../static/img/arrow-down-2-4.svg"
           profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-4.png"
         />
+
+<Modal
+  isOpen={visible}
+  onRequestClose={() => setVisible(false)}
+  className="flex items-center justify-center h-full"
+  overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+>
+  <div className="bg-white rounded-lg p-6 shadow-lg w-80">
+    <h2 className="text-lg font-bold mb-4 text-center">Konfirmasi Pembayaran</h2>
+    <p className="text-center mb-2">Berikut rician tagihan yang perlu kamu bayar</p>
+    <div className="bg-green-100 rounded p-4 mb-4">
+      <div className="flex justify-between mb-2">
+        <span>Tagihan:</span>
+        <span>Rp10.000</span>
+      </div>
+      <div className="flex justify-between mb-2">
+        <span>Denda:</span>
+        <span>Rp0,-</span>
+      </div>
+      <div className="flex justify-between mb-2">
+        <span>Total Harga:</span>
+        <span>Rp10.000</span>
+      </div>
+    </div>
+    <div className="text-center mb-4">
+      <p>Pindai Kode QR :</p>
+      <div className="flex justify-center">
+        <img src={qrCode} alt="QR Code" className="w-32 h-32" />
+      </div>
+      <p></p>
+      <p>kirimkan bukti pembayaran ke admin</p>
+    </div>
+    <button
+      className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+      onClick={() => setVisible(false)}
+    >
+      Kembali
+    </button>
+  </div>
+</Modal>
+
+
       </div>
     </div>
   );
