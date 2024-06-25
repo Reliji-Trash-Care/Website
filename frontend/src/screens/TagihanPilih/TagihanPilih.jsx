@@ -267,7 +267,7 @@ export const TagihanPilih = () => {
               <p>kirimkan bukti pembayaran ke admin</p>
             </div>
             <button
-              className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+              className="w-full bg-primary-2 text-white py-2 rounded hover:bg-green-600"
               onClick={() => setVisible(false)}
             >
               Kembali

@@ -4,7 +4,7 @@ import { NavbarUserFitur } from "../../components/NavbarUserFitur";
 import { SideBarWrapper } from "../../components/SideBarWrapper";
 
 const WhatsApp = () => {
-  const phoneNumber = '6281234567890'; // ganti dengan nomor telepon yang diinginkan
+  const phoneNumber = '6289661258050'; // ganti dengan nomor telepon yang diinginkan
   const message = 'Halo! Saya tertarik dengan produk Anda. Bisa kita diskusikan lebih lanjut?';
 
   return (
