@@ -13,7 +13,7 @@ export const Profil = ({
   openartImage = "../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-1.png",
   arrowDown = "../../../static/img/arrow-down-2.svg",
   setting = "../../../static/img/setting.svg",
-  logout = "../../../static/img/setting.svg",
+  logout = "../../../static/img/logout.svg",
 }) => {
   const [state, dispatch] = useReducer(reducer, {
     property1: property1 || "default",

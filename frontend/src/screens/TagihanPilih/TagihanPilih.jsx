@@ -24,7 +24,7 @@ export const TagihanPilih = () => {
           <div className="absolute w-[996px] h-[678px] top-0 left-[24px] bg-primary-1 rounded-[15px] shadow-drop-shadow-2" />
           <p className="absolute top-[252px] left-[48px] [font-family:'Nunito',Helvetica] font-normal text-black text-[12px] tracking-[0] leading-[16.8px] whitespace-nowrap">
             {" "}
-            Bayar sebelum Mei 2024 dengan metode pembayaran yang dipilih
+            Bayar sebelum Juli 2024 dengan metode pembayaran yang dipilih
           </p>
           <div className="flex flex-col w-[462px] items-start absolute top-[24px] left-[48px] shadow-inner">
             <div className="flex items-center gap-[50px] p-[24px] relative self-stretch w-full flex-[0_0_auto] bg-primary-2 rounded-[10px_10px_0px_0px]">
@@ -32,13 +32,13 @@ export const TagihanPilih = () => {
                 <div className="inline-flex items-center gap-[12px] relative flex-[0_0_auto] mr-[-42.00px]">
                   <img className="relative w-[24px] h-[24px]" alt="Wallet" src="../../../static/img/wallet-3.svg" />
                   <div className="relative w-fit font-body-1-semibold font-[number:var(--body-1-semibold-font-weight)] text-primary-1 text-[length:var(--body-1-semibold-font-size)] tracking-[var(--body-1-semibold-letter-spacing)] leading-[var(--body-1-semibold-line-height)] whitespace-nowrap [font-style:var(--body-1-semibold-font-style)]">
-                    Tagihan Bulan April 2024
+                    Tagihan Bulan Juni 2024
                   </div>
                 </div>
                 <div className="inline-flex items-end gap-[12px] relative flex-[0_0_auto] mr-[-32.00px]">
                   <img className="relative w-[24px] h-[24px]" alt="Danger" src="../../../static/img/danger.svg" />
                   <div className="relative w-fit font-body-1-semibold font-[number:var(--body-1-semibold-font-weight)] text-primary-1 text-[length:var(--body-1-semibold-font-size)] tracking-[var(--body-1-semibold-letter-spacing)] leading-[var(--body-1-semibold-line-height)] whitespace-nowrap [font-style:var(--body-1-semibold-font-style)]">
-                    Denda Bulan April 2024
+                    Denda Bulan Mei 2024
                   </div>
                 </div>
               </div>
@@ -128,7 +128,7 @@ export const TagihanPilih = () => {
               <img className="relative w-[414px] h-px mb-[-0.50px] object-cover" alt="Line" src="../../../static/img/line-15-2.svg" />
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
+              <input type="radio" className="!size-8 !border-tersier-2 !relative" />
               <BankBri
                 BRIClassName="!h-[40px]"
                 className="!h-[40px] !w-[56px] !relative"
@@ -140,7 +140,7 @@ export const TagihanPilih = () => {
               </div>
             </div>
             <div className="inline-flex items-center gap-[24px] relative flex-[0_0_auto]">
-              <input onClick={() => window.location.href = '/'} type="radio" className="!size-8 !border-tersier-2 !relative" />
+              <input type="radio" className="!size-8 !border-tersier-2 !relative" />
               <BankMandiri
                 MANDIRIClassName="!h-[40px]"
                 className="!h-[40px] !w-[56px] !relative"
@@ -235,45 +235,45 @@ export const TagihanPilih = () => {
           profilOpenartImage="../../../static/img/openart-image-nfswrdqc-1711466557108-raw-2-4.png"
         />
 
-<Modal
-  isOpen={visible}
-  onRequestClose={() => setVisible(false)}
-  className="flex items-center justify-center h-full"
-  overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
->
-  <div className="bg-white rounded-lg p-6 shadow-lg w-80">
-    <h2 className="text-lg font-bold mb-4 text-center">Konfirmasi Pembayaran</h2>
-    <p className="text-center mb-2">Berikut rician tagihan yang perlu kamu bayar</p>
-    <div className="bg-green-100 rounded p-4 mb-4">
-      <div className="flex justify-between mb-2">
-        <span>Tagihan:</span>
-        <span>Rp10.000</span>
-      </div>
-      <div className="flex justify-between mb-2">
-        <span>Denda:</span>
-        <span>Rp0,-</span>
-      </div>
-      <div className="flex justify-between mb-2">
-        <span>Total Harga:</span>
-        <span>Rp10.000</span>
-      </div>
-    </div>
-    <div className="text-center mb-4">
-      <p>Pindai Kode QR :</p>
-      <div className="flex justify-center">
-        <img src={qrCode} alt="QR Code" className="w-32 h-32" />
-      </div>
-      <p></p>
-      <p>kirimkan bukti pembayaran ke admin</p>
-    </div>
-    <button
-      className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
-      onClick={() => setVisible(false)}
-    >
-      Kembali
-    </button>
-  </div>
-</Modal>
+        <Modal
+          isOpen={visible}
+          onRequestClose={() => setVisible(false)}
+          className="flex items-center justify-center h-full"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+        >
+          <div className="bg-white rounded-lg p-6 shadow-lg w-80">
+            <h2 className="text-lg font-bold mb-4 text-center">Bayar Sekarang</h2>
+            <p className="text-center mb-2">Berikut rician tagihan yang perlu kamu bayar</p>
+            <div className="bg-green-100 rounded p-4 mb-4">
+              <div className="flex justify-between mb-2">
+                <span>Tagihan:</span>
+                <span>Rp10.000</span>
+              </div>
+              <div className="flex justify-between mb-2">
+                <span>Denda:</span>
+                <span>Rp0,-</span>
+              </div>
+              <div className="flex justify-between mb-2">
+                <span>Total Harga:</span>
+                <span>Rp10.000</span>
+              </div>
+            </div>
+            <div className="text-center mb-4">
+              <p>Pindai Kode QR :</p>
+              <div className="flex justify-center">
+                <img src={qrCode} alt="QR Code" className="w-32 h-32" />
+              </div>
+              <p></p>
+              <p>kirimkan bukti pembayaran ke admin</p>
+            </div>
+            <button
+              className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600"
+              onClick={() => setVisible(false)}
+            >
+              Kembali
+            </button>
+          </div>
+        </Modal>
 
 
       </div>

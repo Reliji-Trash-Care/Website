@@ -43,7 +43,7 @@ export const Frame = ({
           </div>
         </div>
         <div className="inline-flex items-center gap-2 flex-[0_0_auto] relative">
-          <img className="w-6 h-6 relative" alt="Logout" src={property1 === "variant-2" ? "logout-2.svg" : logout} />
+          <img className="w-6 h-6 relative" alt="Logout" src={property1 === "variant-2" ? "image.svg" : logout} />
           <div className="inline-flex items-center gap-2.5 flex-[0_0_auto] justify-center relative">
             <div 
             onClick={() => window.location.href = '/login'}

@@ -14,6 +14,7 @@ const WhatsAppLink = ({ phoneNumber, message }) => {
         <div 
         
         className="relative w-fit mr-[-2.00px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-primary-1 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
+              <img src="../../../static/img/whatsapp.png" alt="whatsapp" className="w-10 h-10 mr-2 relative -mt-1"/>
               Chat Melalui WhatsApp
         </div>
       </a>

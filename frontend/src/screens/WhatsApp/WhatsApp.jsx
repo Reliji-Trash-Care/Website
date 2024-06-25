@@ -27,9 +27,8 @@ const WhatsApp = () => {
               Jika Anda memiliki pertanyaan atau memerlukan bantuan tambahan, jangan ragu untuk menghubungi kami. Kami siap membantu Anda dengan cepat dan memberikan informasi yang Anda butuhkan.
             </p>
 
-            <div className="absolute w-[261px] top-[242px] left-[140px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-primary-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]">
+            <div className="absolute w-[261px] top-[242px] left-[140px] font-heading-8-semibold font-[number:var(--heading-8-semibold-font-weight)] text-primary-2 text-[length:var(--heading-8-semibold-font-size)] text-center tracking-[var(--heading-8-semibold-letter-spacing)] leading-[var(--heading-8-semibold-line-height)] whitespace-nowrap [font-style:var(--heading-8-semibold-font-style)]"  >
             Hubungi Kami Sekarang!
-
             </div>
                 <WhatsAppLink phoneNumber={phoneNumber} message={message} />
             </div>
