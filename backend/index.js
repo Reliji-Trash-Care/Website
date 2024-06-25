@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import mysql from 'mysql';
+import mysql from 'mysql2';
 import bcrypt from 'bcrypt';
 import cors from 'cors';
 import jwt from 'jsonwebtoken';
@@ -17,7 +17,7 @@ const SECRET_KEY = "your_secret_key";
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'roqib3',
   database: 'reliji_trash_care'
 });
 
